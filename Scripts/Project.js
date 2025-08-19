@@ -4,6 +4,8 @@ const CHLOE = '<a href="https://www.linkedin.com/in/chloe-sedoux/" target="_blan
 const MARCO = '<a href="https://www.linkedin.com/in/marco-lepever-264229312/" target="_blank rel="noopener"">Marco Lepever</a>';
 const MUHAMMAD = '<a href="https://www.linkedin.com/in/muhammad-h-fayette-mikano-a51991365/" target="_blank rel="noopener"">Muhammad H Fayette-mikano</a>';
 const JACOB = '<a href="https://www.linkedin.com/in/jacob-brugier-127242203/" target="_blank rel="noopener"">Jacob Brugier</a>';
+const MAYSON = '<a href="https://www.linkedin.com/in/ma%C3%AFtson-pierre-749827300/" target="_blank rel="noopener"">Jacob Brugier</a>';
+
 
 const PROJECTS = [
     {
@@ -43,7 +45,7 @@ const PROJECTS = [
         description: `<b>Prototype</b> réalisé en <u>collaboration</u> avec la Croix-Rouge ✚.<br>Ce projet est une <i>extension</i> de la campagne <b>"Vivre en 2050"</b>.<br>Nous avons tenté d’exprimer, par le <u>gameplay</u>, qu’il était temps d’agir, car les prochaines générations n’auront plus les mêmes opportunités que nous.<br>Le jeu imposera sa fin grâce au <i>level design</i>, épuisant les ressources du joueur en trois jours, et imposant une <b>défaite inévitable</b> 💀.`,
 
         tags: ['Serious Game', '2D', 'Survie', 'Naratif Game'],
-        collabs: [`Collaborateurs :`, `GD : <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MUHAMMAD}`, `Dev : <br> ${MATHYS}`, `Art : <br> ${CHLOE}`],
+        collabs: [`Collaborateurs :`, `Dev :  <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MAYSON}`, `Art : <br> ${CHLOE}`],
         video: 'Assets/Demo/Hope.mp4',
         poster: 'Assets/Demo/Hope.mp4'
     },

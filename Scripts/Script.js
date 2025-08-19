@@ -45,11 +45,11 @@ function BackFlashing(pObject, pInterval, pEndColor) {
     pObject.style.transition = `${pInterval * 0.001}s ease`;
     let lColor = pObject.style.backgroundColor;
     pObject.style.backgroundColor = pEndColor;
-    setTimeout(()=>{
-    pObject.style.backgroundColor = lColor;
+    setTimeout(() => {
+        pObject.style.backgroundColor = lColor;
 
 
-    },pInterval);
+    }, pInterval);
 }
 
 function EraseTextGradually(pElement, pWord, pInterval = 200) {
@@ -98,9 +98,12 @@ document.getElementById("ProjectButton").addEventListener("click", () => {
         block: "start"
     });
 });
-document.getElementById("ScrollButton").addEventListener("click", () => {
+
+const SCROLL_BUTTON = document.getElementById("ScrollButton");
+let scrollValue = window.innerHeight;
+SCROLL_BUTTON.addEventListener("click", () => {
     window.scrollBy({
-        top: window.innerHeight,
+        top: scrollValue,
         left: 0,
         behavior: "smooth"
     });
@@ -116,6 +119,22 @@ buttons.forEach(btn => {
         btn.classList.add("active");
     });
 });
+
+window.addEventListener("scroll", FlipButton);
+function FlipButton() {
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        SCROLL_BUTTON.style.transform = "rotate(180deg)";
+        scrollValue = -document.documentElement.scrollHeight;
+    }
+    else
+    {
+        SCROLL_BUTTON.style.transform = "rotate(0deg)";
+        scrollValue = window.innerHeight;
+    }
+    console.log(document.documentElement.scrollHeight);
+
+}
+
 //#endregion
 
 document.addEventListener("DOMContentLoaded", () => {
