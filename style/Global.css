@@ -694,37 +694,35 @@ footer {
 /* #endregion */
 
 
+@media (max-width: 768px) {
+  
 
 
-/* #Projects { */
-/* grid-template-columns: repeat(1, 1fr); */
-/* grid-template-rows: 35%; */
-/* } */
+  .principal,
+  .secondary,
+  .infoButton,
+  #about img,
+  .option,
+  #Sticker,
 
-.principal,
-.secondary,
-.infoButton,
-#about img,
-.option,
-#Sticker,
-#ProjectDescrib,
-#ProjectTitel,
-#SideCollab,
-#SideTags {
-  display: none;
-}
+  #ProjectDescrib,
+  #ProjectTitel,
+  #SideCollab,
+  #SideTags {
+    display: none;
+  }
 
-#Gamplay {
-  width: 100%;
-}
+  #Gamplay {
+    width: 100%;
+  }
 
-header {
-  justify-content: center;
-}
+  header {
+    justify-content: center;
+  }
 
-#Contact {
-  width: 0;
-  gap: 50%;
-}
+  #Contact {
+    width: 0;
+    gap: 50%;
+  }
 
 }
