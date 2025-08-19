@@ -8,7 +8,10 @@ const sections = [
 
 //USE
 document.getElementById("ContactButton").addEventListener("click", () => {
-    BackFlashing(document.getElementById("Contact"), 1000, "rgb(255, 255, 255)");
+    let contact = document.getElementById("Contact");
+    BackFlashing(contact, 1000, "rgb(255, 255, 255)");
+    contact.style.transform = "scale(1.1)";
+    setTimeout(()=>{contact.style.transform = "scale(1)";},500);
 });
 
 Flashing(texteBar, 500, "rgb(255, 255, 255)", "rgba(255, 255, 255, 0)", true);
@@ -126,8 +129,7 @@ function FlipButton() {
         SCROLL_BUTTON.style.transform = "rotate(180deg)";
         scrollValue = -document.documentElement.scrollHeight;
     }
-    else
-    {
+    else {
         SCROLL_BUTTON.style.transform = "rotate(0deg)";
         scrollValue = window.innerHeight;
     }

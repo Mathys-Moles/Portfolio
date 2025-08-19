@@ -12,6 +12,7 @@ body {
 
 html,
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -395,9 +396,12 @@ p {
 
   display: grid;
   text-align: left;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   grid-template-rows: 400px;
   gap: 50px;
+
+  padding-bottom: 16vh;
 }
 
 #BackProjects {
@@ -436,8 +440,8 @@ h3 {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(10px);
 
-padding: 0 0 10px 0;
-  
+  padding: 0 0 10px 0;
+
   transition: all 0.2s;
 }
 
@@ -456,7 +460,7 @@ padding: 0 0 10px 0;
   border: 2px solid rgba(255, 255, 255, 0);
   background-color: rgba(252, 252, 252, 0.055);
   border-radius: 20px;
- 
+
 }
 
 .projectCard video {
@@ -515,10 +519,12 @@ padding: 0 0 10px 0;
   border-radius: 10px;
   color: white;
 }
-#SideCollab a{
+
+#SideCollab a {
   color: white;
 
 }
+
 #Container {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -589,6 +595,8 @@ footer {
   color: rgb(0, 0, 0);
 
   gap: 10%;
+
+  border-radius: 15px;
 }
 
 .contactSection {
@@ -657,7 +665,7 @@ footer {
   pointer-events: auto;
   width: 10vh;
   display: inline-block;
-  
+
 }
 
 
@@ -686,41 +694,37 @@ footer {
 /* #endregion */
 
 
-@media (max-width: 768px) {
-  .poster {
-    display: none;
-  }
 
-  #Projects {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 35%;
-  }
 
-  .principal,
-  .secondary,
-  .infoButton,
-  #about img,
-  .option,
-  #Sticker,
-  .poster,
-  #ProjectDescrib,
-  #ProjectTitel,
-  #SideCollab,
-  #SideTags {
-    display: none;
-  }
+/* #Projects { */
+/* grid-template-columns: repeat(1, 1fr); */
+/* grid-template-rows: 35%; */
+/* } */
 
-  #Gamplay {
-    width: 100%;
-  }
+.principal,
+.secondary,
+.infoButton,
+#about img,
+.option,
+#Sticker,
+#ProjectDescrib,
+#ProjectTitel,
+#SideCollab,
+#SideTags {
+  display: none;
+}
 
-  header {
-    justify-content: center;
-  }
+#Gamplay {
+  width: 100%;
+}
 
-  #Contact {
-    width: 0;
-    gap: 50%;
-  }
+header {
+  justify-content: center;
+}
+
+#Contact {
+  width: 0;
+  gap: 50%;
+}
 
 }
