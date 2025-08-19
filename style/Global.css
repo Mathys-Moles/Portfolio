@@ -176,6 +176,72 @@ nav p:hover::after {
   scale: 1.2;
 }
 
+#onePoster {
+  top: 66%;
+  left: 10%;
+  height: 41%;
+  z-index: -1;
+}
+
+#twoPoster {
+  top: 5%;
+  left: 100px;
+  height: 65%;
+  transform: rotate(17deg);
+  z-index: -2;
+}
+
+#threePoster {
+  top: 537px;
+  left: 1040px;
+  height: 200px;
+  z-index: -2;
+}
+
+#fourPoster {
+  top: 78px;
+  left: 690px;
+  height: 170px;
+  z-index: -2;
+}
+
+#fivePoster {
+  top: 400px;
+  left: 1277px;
+  height: 180px;
+  z-index: -4;
+}
+
+@media (max-width: 800px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  #threePoster,
+  #fourPoster,
+  #fivePoster {
+    display: none;
+
+  }
+
+  #onePoster {
+    top: 152px;
+    left: 20px;
+    height: 26%;
+  }
+
+  #twoPoster {
+    top: 66%;
+    left: 210px;
+    height: 41%;
+    transform: rotate(0deg);
+  }
+}
 
 #TexteBar {
   font-size: 36px;
@@ -456,9 +522,9 @@ h3 {
 .tag {
   margin: 0 0 12px 0;
   padding: 2px;
-  color: rgba(248, 248, 248, 0.214);
-  border: 2px solid rgba(255, 255, 255, 0);
-  background-color: rgba(252, 252, 252, 0.055);
+  color: rgba(199, 199, 199, 0.807);
+  border: 2px solid rgba(255, 255, 255, 0.319);
+  background-color: rgba(198, 182, 136, 0.055);
   border-radius: 20px;
 
 }
@@ -695,7 +761,7 @@ footer {
 
 
 @media (max-width: 768px) {
-  
+
 
 
   .principal,
