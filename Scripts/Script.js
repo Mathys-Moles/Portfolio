@@ -21,7 +21,6 @@ setTimeout(() => {
     setInterval(() => {
         lCount++;
 
-        console.log(lCount + " contre " + (sections.length - 1));
 
         if (lCount > sections.length - 1) {
             lCount = 0;
@@ -133,8 +132,6 @@ function FlipButton() {
         SCROLL_BUTTON.style.transform = "rotate(0deg)";
         scrollValue = window.innerHeight;
     }
-    console.log(document.documentElement.scrollHeight);
-
 }
 
 //#endregion

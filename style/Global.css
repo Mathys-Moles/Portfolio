@@ -199,15 +199,15 @@ nav p:hover::after {
 }
 
 #fourPoster {
-  top: 78px;
-  left: 690px;
+  top: 81px;
+  left: 720px;
   height: 170px;
   z-index: -2;
 }
 
 #fivePoster {
   top: 400px;
-  left: 1277px;
+  left: 1340px;
   height: 180px;
   z-index: -4;
 }
