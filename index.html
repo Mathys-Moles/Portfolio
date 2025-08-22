@@ -15,7 +15,10 @@
 
 <body>
   <header>
-    <p id="Name">Mathys Moles</p>
+    <nav style="display: flex; align-items: center;  gap: 0;">
+      <p id="Name">Mathys Moles</p>
+      <img id="pofile" src="Assets/ion/profile-pic.png" alt="">
+    </nav>
     <nav class="contentLigne option">
       <p class="button" id="HomePageButton">Accueil</p>
       <p class="button" id="AboutButton">À propos</p>
@@ -27,15 +30,19 @@
   </header>
 
   <div>
-    <video class="poster" id="onePoster" playsinline autoplay controls loop muted src="Assets/Demo/SHUMP _ MUSIC GAME.mp4"></video>
-    <video class="poster" id="twoPoster" playsinline autoplay controls loop muted src="Assets/Demo/Miam - Serious Game.mp4"></video>
-    <video class="poster" id="threePoster"playsinline autoplay controls loop muted src="Assets/Demo/AlgoVersGamePlay-GameJam.mp4"></video>
-    <video class="poster" id="fourPoster" playsinline autoplay controls loop muted src="Assets/Demo/DEMO-PROTO.mp4"></video>
-    <img class="poster" id="fivePoster"src="Assets/Demo/PLAYER.png"></img>
+    <video class="poster" id="onePoster" playsinline autoplay controls loop muted
+      src="Assets/Demo/SHUMP _ MUSIC GAME.mp4"></video>
+    <video class="poster" id="twoPoster" playsinline autoplay controls loop muted
+      src="Assets/Demo/Miam - Serious Game.mp4"></video>
+    <video class="poster" id="threePoster" playsinline autoplay controls loop muted
+      src="Assets/Demo/AlgoVersGamePlay-GameJam.mp4"></video>
+    <video class="poster" id="fourPoster" playsinline autoplay controls loop muted
+      src="Assets/Demo/DEMO-PROTO.mp4"></video>
+    <img class="poster" id="fivePoster" src="Assets/Demo/PLAYER.png"></img>
   </div>
 
   <section id="HomePage">
-    <div class="contentLigne">
+    <div class="contentLigne" style="flex-wrap: wrap;">
       <p class="SameTexte">Je suis</p>
       <h1 id="SwitchTexte" class="SameTexte">Mathys Moles </h1>
       <p id="TexteBar">|</p>
@@ -45,7 +52,7 @@
   <section id="about" class="about-section">
     <img src="Assets/background/brain.png" alt="Mathys Moles" style="width: 40%;">
 
-    <div class="about-inner" role="region" aria-labelledby="about-title">
+    <div id="AboutTexte" class="about-inner" role="region" aria-labelledby="about-title">
       <div class="about-text">
         <p class="kicker fade-up">
           Plus jeune, je transformais des aquariums en petits mondes vivants — une leçon d’équilibre, de patience et de
@@ -126,31 +133,31 @@
     <section id="Projects">
 
     </section>
-      <footer>
-    <section id="Contact">
-      <a href="https://www.linkedin.com/in/mathys-moles/" target="_blank" rel="noopener" class="contactSection button"
-        style="display: flex;">
-        <span class="infoButton">Ouvre une nouvelle page LinkedIn</span>
-        <img src="Assets/ion/icons8-linkedin-50.png" alt="icon LinkedIn">
-        <div>
-          <p class="principal">LinkedIn</p>
-          <p class="secondary">mon profil professionnelle</p>
-        </div>
-      </a>
+    <footer>
+      <section id="Contact">
+        <a href="https://www.linkedin.com/in/mathys-moles/" target="_blank" rel="noopener" class="contactSection button"
+          style="display: flex;">
+          <span class="infoButton">Ouvre une nouvelle page LinkedIn</span>
+          <img src="Assets/ion/icons8-linkedin-50.png" alt="icon LinkedIn">
+          <div>
+            <p class="principal">LinkedIn</p>
+            <p class="secondary">mon profil professionnelle</p>
+          </div>
+        </a>
 
-      <img src="Assets/ion/icons8-flèche-développer-96.png" alt="fleche vers le bas" id="ScrollButton" class="button">
+        <img src="Assets/ion/icons8-flèche-développer-96.png" alt="fleche vers le bas" id="ScrollButton" class="button">
 
-      <a href="mailto:mathysmoles@gmail.com" id="SendMail" class="contactSection button" style="display: flex;"
-        rel="noopener">
-        <span class="infoButton">Copie l'adresse email</span>
-        <img src="Assets/ion/icons8-message-48.png" alt="envelope mail">
-        <div>
-          <p class="principal">Mail</p>
-          <p class="secondary">mathysmoles@gmail.com</p>
-        </div>
-      </a>
-    </section>
-  </footer>
+        <a href="mailto:mathysmoles@gmail.com" id="SendMail" class="contactSection button" style="display: flex;"
+          rel="noopener">
+          <span class="infoButton">Copie l'adresse email</span>
+          <img src="Assets/ion/icons8-message-48.png" alt="envelope mail">
+          <div>
+            <p class="principal">Mail</p>
+            <p class="secondary">mathysmoles@gmail.com</p>
+          </div>
+        </a>
+      </section>
+    </footer>
   </section>
 
 

@@ -38,6 +38,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
+
   font-family: "Chango", sans-serif;
   font-size: 150%;
 
@@ -94,8 +95,8 @@ nav p:hover::after {
 
 #Sticker {
   pointer-events: none;
-  color: rgb(251, 254, 255);
-  font-family: "Fascinate", system-ui;
+  color: rgb(255, 255, 255);
+  font-family: "Chango", sans-serif;
   top: 60%;
   left: -2.5%;
   transform: rotate(-15deg);
@@ -103,7 +104,7 @@ nav p:hover::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
 
   width: 17vw;
   height: 17vw;
@@ -114,6 +115,7 @@ nav p:hover::after {
 }
 
 #Sticker p {
+  color: rgb(37, 37, 37);
   transform: rotate(15deg);
   position: relative;
   top: 7%;
@@ -125,13 +127,19 @@ nav p:hover::after {
 /* ID */
 #Name {
   font-family: "Fascinate", system-ui;
+  margin: 0;
+}
+
+#pofile {
+
+  width: 5%;
 }
 
 .button {
   margin: 0;
   cursor: pointer;
   transition: all 1s;
-
+  white-space: nowrap;
 
 }
 
@@ -199,9 +207,9 @@ nav p:hover::after {
 }
 
 #fourPoster {
-  top: 81px;
-  left: 720px;
-  height: 170px;
+  top: 81.5px;
+  left: 695px;
+  height: 215px;
   z-index: -2;
 }
 
@@ -212,7 +220,7 @@ nav p:hover::after {
   z-index: -4;
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
 
   html,
   body {
@@ -241,7 +249,7 @@ nav p:hover::after {
     height: 41%;
     transform: rotate(0deg);
   }
-}
+} */
 
 #TexteBar {
   font-size: 36px;
@@ -448,6 +456,10 @@ p {
   background-color: aliceblue;
   background-image: url(../Assets/background/ENDER.png);
   background-size: cover;
+}
+
+#AboutTexte {
+  padding: 0 10vw 0 0;
 }
 
 /* #endregion */
@@ -749,27 +761,30 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .SameTexte {
+  display: inline-block;
+  display: inline;
   font-weight: 100;
   font-size: 25px;
 }
 
 /* #endregion */
 
+@media (max-width: 600px) {
+  .poster {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
-
-
-
   .principal,
   .secondary,
   .infoButton,
   #about img,
   .option,
-  #Sticker,
+  #Sticker,#pofile,
 
   #ProjectDescrib,
   #ProjectTitel,
@@ -791,4 +806,7 @@ footer {
     gap: 50%;
   }
 
+  #AboutTexte {
+    padding: 0;
+  }
 }
