@@ -3,15 +3,21 @@ let texteBar = document.getElementById("TexteBar");
 let switchText = document.getElementById("SwitchTexte");
 
 const sections = [
-    "Mathys Moles", "Gameplay programmeur", "Modulaire", "Passionné", "Motivé", "Game designer", "Étudiant à ISART DIGITAL"
+    "Mathys Moles.", "Gameplay programmeur.", "Modulaire.", "Passionne.", "Motive.", "Game designer.", "Etudiant a ISART DIGITAL."
 ];
 
 //USE
 document.getElementById("ContactButton").addEventListener("click", () => {
-    let contact = document.getElementById("Contact");
-    BackFlashing(contact, 1000, "rgb(255, 255, 255)");
-    contact.style.transform = "scale(1.1)";
-    setTimeout(()=>{contact.style.transform = "scale(1)";},500);
+
+    let contacts = Array.from(document.getElementsByClassName("contactSection"));
+
+    contacts.forEach(element => {
+        BackFlashing(element, 1000, "rgb(255, 255, 255)");
+    element.style.transform = "scale(1.1)";
+    setTimeout(()=>{element.style.transform = "scale(1)";},500);
+    });
+  
+    
 });
 
 Flashing(texteBar, 500, "rgb(255, 255, 255)", "rgba(255, 255, 255, 0)", true);
@@ -82,6 +88,18 @@ function WriteTextGradually(pElement, pWord, pInterval = 200) {
 }
 
 //#region scrollButton
+let elements = Array.from(document.getElementsByClassName("ProjectButton"));
+
+elements.forEach(element => {
+    element.addEventListener("click", () => {
+    document.getElementById("Projects").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+});
+
+
 document.getElementById("AboutButton").addEventListener("click", () => {
     document.getElementById("about").scrollIntoView({
         behavior: "smooth",
@@ -90,12 +108,6 @@ document.getElementById("AboutButton").addEventListener("click", () => {
 });
 document.getElementById("HomePageButton").addEventListener("click", () => {
     document.getElementById("HomePage").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-});
-document.getElementById("ProjectButton").addEventListener("click", () => {
-    document.getElementById("Projects").scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
