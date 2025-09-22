@@ -1,10 +1,18 @@
 //VAR
 let texteBar = document.getElementById("TexteBar");
 let switchText = document.getElementById("SwitchTexte");
+const frSections = ["Mathys Moles.", "Gameplay programmeur.", "Modulaire.", "Passionne.", "Motive.", "Game designer.", "Etudiant a ISART DIGITAL."];
+const enSections = [   "Mathys Moles.",  "Gameplay Programmer.",     "Modular.",    "Passionate.",    "Motivated.",    "Game Designer.",    "Student at ISART DIGITAL."];
+let frFlag = document.getElementById("frFlag");
+let enFlag = document.getElementById("enFlag");
+ const frStyle = window.getComputedStyle(frFlag);
+    const enStyle = window.getComputedStyle(enFlag);
 
-const sections = [
-    "Mathys Moles.", "Gameplay programmeur.", "Modulaire.", "Passionne.", "Motive.", "Game designer.", "Etudiant a ISART DIGITAL."
-];
+
+let currentLang = true;
+
+let sections;
+ChangeLang();
 
 //USE
 document.getElementById("ContactButton").addEventListener("click", () => {
@@ -172,3 +180,50 @@ document.getElementById("SendMail").addEventListener("click", () => {
         navigator.clipboard.writeText("mathysmoles@gmail.com");
     }, 1000);
 });
+
+
+///TRADUCTION
+let tradButton = document.getElementById("TardButton");
+tradButton.addEventListener("click", ChangeLang);
+
+
+
+   
+
+function ChangeLang()
+{
+   
+
+    // Appliquer les valeurs de enFlag à frFlag
+    if (currentLang) {
+     frFlag.style.top = "20%";
+    frFlag.style.left = "40%";
+    frFlag.style.zIndex = "-1";
+
+    enFlag.style.top = "20%";
+    enFlag.style.left = "-40%";
+    enFlag.style.zIndex = "1";
+} else {
+    frFlag.style.top = "20%";
+    frFlag.style.left = "20%";
+    frFlag.style.zIndex = "1";
+
+    enFlag.style.top = "20%";
+    enFlag.style.left = "-20%";
+    enFlag.style.zIndex = "-1";
+}
+
+    let lang;
+    lang = currentLang? "fr" : "en";
+    sections = currentLang? frSections : enSections;
+      fetch("../Traduction/"+lang + ".json")
+    .then(response => response.json())
+    .then(translations => {
+    
+      document.querySelectorAll("[data-key]").forEach(el => {
+        let key = el.getAttribute("data-key");
+        el.innerHTML = translations[key]; 
+      });
+    });
+    currentLang = !currentLang;
+}

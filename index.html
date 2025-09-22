@@ -15,18 +15,25 @@
 
 <body>
   <header>
-    <nav style="display: flex; align-items: center;  gap: 0;">
-      <p id="Name">Mathys Moles</p>
+   
+    <nav class="contentLigne option">
+      <p class="button ender" id="HomePageButton" data-key="Home">Accueil.</p>
+      <p class="button ender" id="AboutButton" data-key="About">A propos.</p>
+      <p class="button ProjectButton ender" data-key="Proj">Projets.</p>
       
     </nav>
-    <nav class="contentLigne option">
-      <p class="button ender" id="HomePageButton">Accueil.</p>
-      <p class="button ender" id="AboutButton">A propos.</p>
-      <p class="button ProjectButton ender">Projets.</p>
+
+     <nav style="display: flex; align-items: center;  gap: 0;">
+      <div id="TardButton">
+        <img src="Assets/ion/united-kingdom.png" alt="Uk flag" class="flag" id="frFlag">
+        <img src="Assets/ion/france.png" alt="Uk flag" class="flag" id="enFlag">
+
+      </div>
+      
     </nav>
     <div id="Sticker">
-      <p>Stage 2–4 mois ✨<br>✨Mai–Août 2026</p>
-    </div>
+      <p data-key="Stick">Stage 2–4 mois ✨<br>✨Mai–Août 2026</p>
+    </div> 
   </header>
 
   <div>
@@ -43,7 +50,7 @@
 
   <section id="HomePage">
     <div class="contentLigne" style="flex-wrap: wrap;">
-      <p class="SameTexte">Je suis</p>
+      <p data-key="StartSwitch" class="SameTexte">Je suis</p>
       <h1 id="SwitchTexte" class="SameTexte">Mathys Moles </h1>
       <p id="TexteBar">|</p>
     </div>
@@ -54,47 +61,47 @@
 
     <div id="AboutTexte" class="about-inner" role="region" aria-labelledby="about-title">
       <div class="about-text">
-        <p class="kicker fade-up">
+        <p class="kicker fade-up" data-key="AboutA">
           Plus jeune, je transformais des aquariums en petits mondes vivants — une leçon d’équilibre, de patience et de
           composition que j’applique aujourd’hui au game design.
         </p>
 
         <h2 class="fade-up" id="about-title">
-          <span id="cloud" class="highlight" style="">Mathys Moles</span> — Game Design &amp; Programmation (ISART)
+          <span id="cloud" class="highlight">Mathys Moles</span> — Game Design &amp; Programmation (ISART)
         </h2>
 
-        <p class="fade-up">
+        <p class="fade-up" Data-key="AboutB">
           J’aime raconter des histoires par le gameplay, mêlant mécaniques réfléchies et ambiances immersives.
         </p>
 
-        <p class="fade-up">
+        <p class="fade-up" Data-key="AboutC">
           J’ai conçu des <strong>serious games</strong> pour le <strong>Centre Antipoison belge</strong> et la
           <strong>Croix-Rouge française</strong>, où pédagogie et rigueur technique se rencontrent.
         </p>
 
-        <p class="fade-up">
+        <p class="fade-up" Data-key="AboutD">
           <strong>Curieux, innovant et aventurier</strong>, je vise les studios de jeux vidéo — <strong>recherche active
             de stage 2–4 mois (mai–août 2026)</strong> pour rejoindre une équipe et transformer des idées en expériences
           jouables.
         </p>
 
-        <p class="fade-up meta">
+        <p class="fade-up meta" Data-key="AboutE">
           Pour créer ce portfolio, je me suis formé en <strong>HTML & CSS</strong> puis en
           <strong>JavaScript</strong> pour enrichir l’interactivité — une preuve concrète de ma curiosité et de ma
           volonté d’apprendre.
         </p>
 
         <div class="fade-up ctas">
-          <p class="btn btn-primary ProjectButton" >Voir mes projets</p>
-          <p class="btn btn-ghost" id="ContactButton">Me contacter</p>
+          <p class="btn btn-primary ProjectButton" Data-key="AboutF">Voir mes projets</p>
+          <p class="btn btn-ghost" id="ContactButton" Data-key="AboutG">Me contacter</p>
         </div>
 
         <div class="fade-up tech-badges">
           <span class="badge love">Juiciness Lover🍹</span>
           <span class="badge love">UX💘</span>
           <span class="badge love">Game Feel🔥</span>
-          <span class="badge love">Expérimentateur🧪</span>
-          <span class="badge love">Créativité🎨</span>
+          <span class="badge love" Data-key="AboutH">Expérimentateur🧪</span>
+          <span class="badge love" Data-key="AboutI">Créativité🎨</span>
           <span class="badge love">Gameplay Programmer🕹️</span>
           <span class="badge love">Bug Hunter🕵️‍♂️</span>
           <span class="badge lang">C#</span>
