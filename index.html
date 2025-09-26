@@ -14,39 +14,27 @@
 </head>
 
 <body>
+
   <header>
-   
     <nav class="contentLigne option">
       <p class="button ender" id="HomePageButton" data-key="Home">Accueil.</p>
       <p class="button ender" id="AboutButton" data-key="About">A propos.</p>
       <p class="button ProjectButton ender" data-key="Proj">Projets.</p>
-      
     </nav>
 
-     <nav style="display: flex; align-items: center;  gap: 0;">
-      <div id="TardButton">
-        <img src="Assets/ion/united-kingdom.png" alt="Uk flag" class="flag" id="frFlag">
-        <img src="Assets/ion/france.png" alt="Uk flag" class="flag" id="enFlag">
 
-      </div>
-      
-    </nav>
+
+
+    <div class="checkbox-wrapper-41" id="TardButton">
+      <input type="checkbox">
+    </div>
+
+
     <div id="Sticker">
       <p data-key="Stick">Stage 2–4 mois ✨<br>✨Mai–Août 2026</p>
-    </div> 
+    </div>
   </header>
 
-  <div>
-    <video class="poster shape ProjectButton" id="onePoster" playsinline autoplay  loop muted
-      src="Assets/Demo/SHUMP _ MUSIC GAME.mp4"></video>
-    <video class="poster shape ProjectButton" id="twoPoster" playsinline autoplay  loop muted
-      src="Assets/Demo/Miam - Serious Game.mp4"></video>
-    <video class="poster shape ProjectButton" id="threePoster" playsinline autoplay  loop muted
-      src="Assets/Demo/AlgoVersGamePlay-GameJam.mp4"></video>
-    <video class="poster shape ProjectButton" id="fourPoster" playsinline autoplay  loop muted
-      src="Assets/Demo/DEMO-PROTO.mp4"></video>
-    <img class="poster shape ProjectButton" id="fivePoster" src="Assets/Demo/PLAYER.png"></img>
-  </div>
 
   <section id="HomePage">
     <div class="contentLigne" style="flex-wrap: wrap;">
@@ -55,36 +43,31 @@
       <p id="TexteBar">|</p>
     </div>
   </section>
-
+  <canvas id="bubbleCanvas"></canvas>
+  <!-- Section About -->
   <section id="about" class="about-section">
     <img src="Assets/ion/MATHYS_MOLES.png" alt="Mathys Moles" id="Portait" style="width: 40%;">
-
     <div id="AboutTexte" class="about-inner" role="region" aria-labelledby="about-title">
       <div class="about-text">
         <p class="kicker fade-up" data-key="AboutA">
           Plus jeune, je transformais des aquariums en petits mondes vivants — une leçon d’équilibre, de patience et de
           composition que j’applique aujourd’hui au game design.
         </p>
-
         <h2 class="fade-up" id="about-title">
           <span id="cloud" class="highlight">Mathys Moles</span> — Game Design &amp; Programmation (ISART)
         </h2>
-
         <p class="fade-up" Data-key="AboutB">
           J’aime raconter des histoires par le gameplay, mêlant mécaniques réfléchies et ambiances immersives.
         </p>
-
         <p class="fade-up" Data-key="AboutC">
           J’ai conçu des <strong>serious games</strong> pour le <strong>Centre Antipoison belge</strong> et la
           <strong>Croix-Rouge française</strong>, où pédagogie et rigueur technique se rencontrent.
         </p>
-
         <p class="fade-up" Data-key="AboutD">
           <strong>Curieux, innovant et aventurier</strong>, je vise les studios de jeux vidéo — <strong>recherche active
             de stage 2–4 mois (mai–août 2026)</strong> pour rejoindre une équipe et transformer des idées en expériences
           jouables.
         </p>
-
         <p class="fade-up meta" Data-key="AboutE">
           Pour créer ce portfolio, je me suis formé en <strong>HTML & CSS</strong> puis en
           <strong>JavaScript</strong> pour enrichir l’interactivité — une preuve concrète de ma curiosité et de ma
@@ -116,11 +99,10 @@
     </div>
   </section>
 
+  <!-- ProjectScreen et autres sections -->
   <section id="ProjectScreen">
     <div id="Container">
-      <div id="SideTags">
-      </div>
-
+      <div id="SideTags"></div>
       <div id="Column">
         <h3 id="ProjectTitel">Shmup - Musical Game 🎵</h3>
         <video id="Gamplay" src="Assets/Demo/SHUMP _ MUSIC GAME.mp4" controls playsinline></video>
@@ -131,15 +113,12 @@
           <u><b>tout</b> est régi par le rythme et la musique</u>.
         </p>
       </div>
-
-      <div id="SideCollab">
-      </div>
+      <div id="SideCollab"></div>
     </div>
   </section>
-  <section id="BackProjects">
-    <section id="Projects">
 
-    </section>
+  <section id="BackProjects">
+    <section id="Projects"></section>
     <footer>
       <section id="Contact">
         <a href="https://www.linkedin.com/in/mathys-moles/" target="_blank" rel="noopener" class="contactSection button"
@@ -151,9 +130,7 @@
             <p class="secondary">mon profil professionnelle</p>
           </div>
         </a>
-
         <img src="Assets/ion/icons8-flèche-développer-96.png" alt="fleche vers le bas" id="ScrollButton" class="button">
-
         <a href="mailto:mathysmoles@gmail.com" id="SendMail" class="contactSection button" style="display: flex;"
           rel="noopener">
           <span class="infoButton">Copie l'adresse email</span>
@@ -167,9 +144,10 @@
     </footer>
   </section>
 
-
+  <!-- Scripts -->
   <script src="Scripts/Script.js" defer></script>
   <script src="Scripts/Project.js" defer></script>
+  <script src="Scripts/Bubbles.js" defer></script> <!-- Nouveau script pour les bulles -->
 </body>
 
 </html>

@@ -1,26 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Fascinate&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-  @import url("https://use.typekit.net/qzi6gbk.css");
+@import url("https://use.typekit.net/qzi6gbk.css");
 
-  @font-face {
+@font-face {
   font-family: "Cloudy";
   src: url("../Assets/font/Cloudy-0W244.ttf") format("truetype");
-  /* tu peux aussi mettre woff ou woff2 si tu les as */
+
 }
 
+/* From Uiverse.io by Shoh2008 */
+/* From Uiverse.io by Shoh2008 */
+.checkbox-wrapper-41 {
+  --size: 100px;
+}
+.checkbox-wrapper-41 input[type="checkbox"] {
+  opacity: 0.5;
+  -webkit-appearance: none;
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  background: url("https://flagcdn.com/fr.svg") no-repeat center/cover;
+  background-size: 100%; /* taille normale */
+  border: 3px solid #222;
+  border-radius: 30px 100px 100px 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease; /* transition douce */
+}
+
+/* Quand on survole le bouton → zoom du drapeau */
+.checkbox-wrapper-41 input[type="checkbox"]:hover {
+  opacity: 1;
+  background-size: 120%; /* zoom */
+  scale: 1.05;
+}
+
+.checkbox-wrapper-41 input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) / 2);
+  height: calc(var(--size) / 2);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0.7);
+  border: 3px solid #222;
+  border-radius: 30px 100px 100px 100px;
+  background-color: #fff;
+  /* petit rond blanc */
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.checkbox-wrapper-41 input[type="checkbox"]:checked {
+  background: url("https://flagcdn.com/gb.svg") no-repeat center/cover;
+  /* 🇬🇧 quand activé */
+  border-radius: 100px 100px 30px 100px;
+}
+
+.checkbox-wrapper-41 input[type="checkbox"]:checked::before {
+  left: 50%;
+  background-color: #fff;
+  border-radius: 100px 100px 30px 100px;
+}
+
+.bubble-media {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  clip-path: circle(50% at 50% 50%);
+  transition: transform 0.3s ease;
+}
+
+body {
+  overflow: hidden;
+}
+
+#bubbleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.bubble-video {
+
+  position: absolute;
+  object-fit: cover;
+  clip-path: circle(50% at 50% 50%);
+
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
 .shape {
-	/* <div class="shape"> OR <img class="shape"> */
 
-	
-	clip-path: shape(from 0% 45.72%,smooth by 23.13% -40.63% with 22.96% -3.06%,curve to 53.91% 0% with 30.78% 27.2%/50.22% 8.22%,curve by 29.64% 14.87% with 5.63% 11.94%/24.54% 21.33%,curve by 16.45% 54.4% with 3.87% 18.98%/5.19% 46.18%,curve by -18.03% 30.72% with 0% 0%/-14.07% 9.59%,curve by -33.6% 0% with -6.16% -9.59%/-30.61% -12.52%,curve by -26.74% -21.72% with 0% 0%/-14.69% -28.96%,curve to 0% 45.72% with 17.41% 58.12%/0% 45.72%,close);
+
+
+  clip-path: shape(from 0% 45.72%, smooth by 23.13% -40.63% with 22.96% -3.06%, curve to 53.91% 0% with 30.78% 27.2%/50.22% 8.22%, curve by 29.64% 14.87% with 5.63% 11.94%/24.54% 21.33%, curve by 16.45% 54.4% with 3.87% 18.98%/5.19% 46.18%, curve by -18.03% 30.72% with 0% 0%/-14.07% 9.59%, curve by -33.6% 0% with -6.16% -9.59%/-30.61% -12.52%, curve by -26.74% -21.72% with 0% 0%/-14.69% -28.96%, curve to 0% 45.72% with 17.41% 58.12%/0% 45.72%, close);
 }
+
 /* Balis */
 body {
   font-family: "Chango", sans-serif;
   margin: 0;
-  background-color: #080115;
+  background-color: #000000;
   z-index: -200;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 html,
@@ -33,7 +125,7 @@ body {
 
 header {
   pointer-events: auto;
-  width: 93.8%;
+  
   position: fixed;
   z-index: 1000;
 
@@ -44,8 +136,10 @@ header {
   background-size: cover;
   height: 9vh;
 
-  padding: 0 3%;
 
+width: 100%;       /* Toujours 100% pour coller au viewport */
+  padding: 0 5%;     /* Ajuste les marges intérieures */
+  box-sizing: border-box; /* Pour que le padding soit inclus dans la largeur */
 
   display: flex;
   justify-content: space-between;
@@ -60,16 +154,17 @@ header {
 
   box-shadow: 17px 18px 20px 0px rgba(0, 0, 0, 0.65);
 
--webkit-text-stroke: 1px black; 
+  -webkit-text-stroke: 1px black;
 }
 
 
-header p{
+header p {
 
-    
-   font-family: "Cloudy", sans-serif;
+
+  font-family: "Cloudy", sans-serif;
 
 }
+
 div {
   gap: 10px;
 }
@@ -108,8 +203,10 @@ nav .ender::after {
   height: 3px;
   background-color: var(--accent);
   transition: width 0.3s ease;
-  filter: blur(1px); /* 👈 flou ajouté */
-  opacity: 1;      /* 👈 un peu de transparence pour adoucir */
+  filter: blur(1px);
+  /* 👈 flou ajouté */
+  opacity: 1;
+  /* 👈 un peu de transparence pour adoucir */
 }
 
 nav .ender:hover::after {
@@ -140,7 +237,7 @@ nav .ender:hover::after {
 }
 
 #Sticker p {
-  -webkit-text-stroke:0px black; 
+  -webkit-text-stroke: 0px black;
   font-family: "Chango", sans-serif;
   color: rgb(255, 255, 255);
   transform: rotate(15deg);
@@ -152,36 +249,14 @@ nav .ender:hover::after {
 
 
 /* ID */
-#TardButton{
-position: relative;
-}
-.flag{
-  position: relative;
-  height: 60px;
-  aspect-ratio: 1.25;
-transition: all 0.5s;
-/* clip-path: shape(from 84.07% 35.63%,curve to 75% 33.33% with 81.25% 34.17%/78.2% 33.33%,curve by -1.56% -2.08% with -0.86% 0%/-1.56% -0.93%,smooth by 1.56% -2.08% with 0.7% -2.08%,curve by 8.25% 1.69% with 2.88% 0%/5.64% 0.62%,curve to 53.13% 0% with 79.67% 13.1%/67.57% 0%,curve by -27.33% 21.51% with -11.77% 0%/-22% 8.69%,curve by 6.31% 4.43% with 2.37% 0.82%/4.52% 2.36%,curve by 0.68% 3.7% with 0% 0%/1.85% 2.14%,smooth by -2.89% -0.76% with -2.89% -0.76%,curve by -6.42% -3.73% with -1.78% -1.99%/-3.99% -3.32%,curve to 21.88% 25% with 22.95% 25.06%/22.42% 25%,curve by -12.5% 16.67% with -6.9% 0%/-12.5% 7.46%,curve by 0.99% 6.45% with 0% 2.29%/0.36% 4.47%,curve to 18.75% 45.83% with 12.95% 46.68%/15.77% 45.83%,curve by 1.56% 2.08% with 0.86% 0%/1.56% 0.93%,smooth by -1.56% 2.08% with -0.7% 2.08%,curve by -6.99% 1.83% with -2.48% 0%/-4.83% 0.66%,curve by -0.57% 0.33% with -0.19% 0.1%/-0.38% 0.22%,curve by -1.78% 1.18% with -0.61% 0.36%/-1.21% 0.74%,curve to 0% 75% with 3.79% 57.66%/0% 65.73%,curve by 18.75% 25% with 0% 13.81%/8.4% 25%,hline by 56.25%,curve by 25% -33.33% with 13.81% 0%/25% -14.92%,curve to 84.07% 35.63% with 100% 52.53%/93.39% 40.48%,close,move to 35.94% 77.08%,curve by -1.56% -2.08% with -0.86% 0%/-1.56% -0.93%,curve by -4.58% -14.73% with 0% -5.75%/-1.75% -10.96%,curve by -0.38% -3.43% with 0% 0%/-1.55% -1.9%,smooth by 2.59% 0.49% with 2.59% 0.49%,curve to 37.5% 75% with 35.4% 61.85%/37.5% 68.1%,curve to 35.94% 77.08% with 37.5% 76.15%/36.8% 77.08%,close,move to 89.06% 68.75%,curve by -1.56% -2.08% with -0.86% 0%/-1.56% -0.93%,curve by -12.5% -16.67% with 0% -9.2%/-5.6% -16.67%,curve by -1.56% -2.08% with -0.86% 0%/-1.56% -0.93%,smooth by 1.56% -2.08% with 0.7% -2.08%,curve by 15.63% 20.83% with 8.63% 0%/15.63% 9.33%,curve to 89.06% 68.75% with 90.63% 67.82%/89.93% 68.75%,close); */
-}
-#frFlag{
-  position: relative;
-  left: 40%;
-  top: 10px;
-  z-index: 1;
-}
-#enFlag{
-   position: relative;
-   left: 0%;
-  top: 0px;
-  z-index: -1;
-}
 
 #Name {
   font-family: "Cloudy", sans-serif;
-background: var(--accent);
-     background: linear-gradient(to top right, #FF6B35 0%, #CFA61B 54%, #CFCFCF 100%);
-   -webkit-background-clip: text;
+  background: var(--accent);
+  background: linear-gradient(to top right, #FF6B35 0%, #CFA61B 54%, #CFCFCF 100%);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   font-size: 40px;
+  font-size: 40px;
   margin: 0;
 }
 
@@ -205,16 +280,19 @@ background: var(--accent);
 
 /* #region HomePage*/
 #HomePage {
+  background: #FFCCDF;
+  background: linear-gradient(to top, #FFCCDF 0%, #D0F1FF 22%, #97DAF5 61%, #60B0FB 100%);
 
   pointer-events: none;
-  background-image: url(../Assets/background/AdobeStock_242032542.jpeg);
+  /* background-image: url(../Assets/background/AdobeStock_242032542.jpeg); */
   background-size: cover;
 
   height: 107vh;
 
-  z-index: 1;
+
 
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -226,6 +304,11 @@ background: var(--accent);
 
 }
 
+#HomePage * {
+
+  z-index: 2;
+}
+
 .poster {
   pointer-events: auto;
 
@@ -233,7 +316,7 @@ background: var(--accent);
 
   transition: 0.2s all;
 
-  clip-path: shape(from 0.68% 44.84%,curve by 20.67% -36.2% with 6.25% -2.32%/19.3% -10.26%,curve by 1.38% -1.07% with 0.08% -1.45%/0.88% -2.07%,curve by 30.27% -7.16% with 8.31% 16.83%/25.65% 1.14%,curve by 1.05% 0% with 0.3% -0.55%/0.74% -0.54%,curve by 29.63% 14.78% with 6.17% 11.13%/23.64% 19.69%,curve by 1.05% 0.96% with 0.41% -0.34%/0.88% 0.08%,curve by 14.8% 51.8% with 3.55% 17.97%/5.19% 42.2%,curve by -0.04% 3.27% with 0.66% 0.66%/0.63% 2.69%,curve by -16.37% 27.79% with -4.02% 3.4%/-12.89% 12.4%,curve by -1.13% 0.77% with -0.21% 0.91%/-0.72% 1.27%,curve by -33.77% -0.39% with -7.15% -8.54%/-29.34% -11.03%,curve by -1.13% 0.18% with -0.29% 0.7%/-0.79% 0.78%,curve by -26.56% -21.13% with -3.02% -5.38%/-15.69% -26.43%,curve by -0.9% -0.91% with -0.36% 0.18%/-0.73% -0.2%,curve to 0.52% 48.24% with 16.07% 63.07%/5.76% 52.72%,curve by 0.16% -3.4% with -0.77% -0.66%/-0.65% -3.1%,close);
+  clip-path: shape(from 0.68% 44.84%, curve by 20.67% -36.2% with 6.25% -2.32%/19.3% -10.26%, curve by 1.38% -1.07% with 0.08% -1.45%/0.88% -2.07%, curve by 30.27% -7.16% with 8.31% 16.83%/25.65% 1.14%, curve by 1.05% 0% with 0.3% -0.55%/0.74% -0.54%, curve by 29.63% 14.78% with 6.17% 11.13%/23.64% 19.69%, curve by 1.05% 0.96% with 0.41% -0.34%/0.88% 0.08%, curve by 14.8% 51.8% with 3.55% 17.97%/5.19% 42.2%, curve by -0.04% 3.27% with 0.66% 0.66%/0.63% 2.69%, curve by -16.37% 27.79% with -4.02% 3.4%/-12.89% 12.4%, curve by -1.13% 0.77% with -0.21% 0.91%/-0.72% 1.27%, curve by -33.77% -0.39% with -7.15% -8.54%/-29.34% -11.03%, curve by -1.13% 0.18% with -0.29% 0.7%/-0.79% 0.78%, curve by -26.56% -21.13% with -3.02% -5.38%/-15.69% -26.43%, curve by -0.9% -0.91% with -0.36% 0.18%/-0.73% -0.2%, curve to 0.52% 48.24% with 16.07% 63.07%/5.76% 52.72%, curve by 0.16% -3.4% with -0.77% -0.66%/-0.65% -3.1%, close);
 }
 
 
@@ -243,7 +326,7 @@ background: var(--accent);
 }
 
 #onePoster {
- 
+
   top: 66%;
   left: 10%;
   height: 41%;
@@ -308,8 +391,8 @@ background: var(--accent);
 
 #TexteBar {
   font-size: 60px;
-  
-    -webkit-text-stroke: 2px black; 
+
+  -webkit-text-stroke: 2px black;
 
 
   font-weight: lighter;
@@ -323,7 +406,7 @@ background: var(--accent);
   --bg: #0f1115;
   --card: #0b0c0f;
   --muted: #9aa0a6;
-  --accent: #FF6B35;
+  --accent: #6db5f9;
   --text: #f7f7f7;
 }
 
@@ -374,11 +457,12 @@ p {
 }
 
 .highlight {
-  
+
   font-weight: 700;
   color: var(--accent);
   font-weight: bold;
 }
+
 .meta {
   color: var(--muted);
   font-size: 0.95rem;
@@ -518,12 +602,12 @@ p {
 
 #AboutTexte {
   padding: 0 18vw 0 0;
- 
+
 }
 
-#Portait{
-   transform: translate(5%,20%);
-   
+#Portait {
+  transform: translate(5%, 20%);
+
 
 }
 
@@ -618,6 +702,7 @@ h3 {
 
 /* #region ProjectScreen */
 #ProjectScreen {
+    overflow: auto;
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
@@ -729,6 +814,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   height: 8vh;
+  z-index: 3;
 }
 
 #Contact {
@@ -744,8 +830,8 @@ footer {
 
 .contactSection {
 
-box-shadow: 17px 18px 20px 0px rgba(0, 0, 0, 0.65);
- 
+  box-shadow: 17px 18px 20px 0px rgba(0, 0, 0, 0.65);
+
   position: relative;
   text-decoration: none;
   cursor: pointer;
@@ -814,9 +900,9 @@ box-shadow: 17px 18px 20px 0px rgba(0, 0, 0, 0.65);
   display: inline-block;
 
 }
-#ScrollButton:hover
-{
-animation: shake 3s ease 0s 1 normal none;
+
+#ScrollButton:hover {
+  animation: shake 3s ease 0s 1 normal none;
 }
 
 #ScrollButton:active {
@@ -838,8 +924,8 @@ animation: shake 3s ease 0s 1 normal none;
 .SameTexte {
 
   text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.72);
-   font-family: "Cloudy", sans-serif;
-    -webkit-text-stroke: 2px black; 
+  font-family: "Cloudy", sans-serif;
+  -webkit-text-stroke: 2px black;
   display: inline-block;
   display: inline;
   font-weight: 100;
@@ -860,8 +946,9 @@ animation: shake 3s ease 0s 1 normal none;
   .secondary,
   .infoButton,
   #about img,
-  .option,
-  #Sticker,#pofile,
+
+  #Sticker,
+  #pofile,
 
   #ProjectDescrib,
   #ProjectTitel,
@@ -876,10 +963,13 @@ animation: shake 3s ease 0s 1 normal none;
 
   header {
     justify-content: center;
-    
+    width: 100%;
+    font-size: 12px;
 
   }
-
+.checkbox-wrapper-41 {
+  scale: 0.5;
+}
   #Contact {
     width: 0;
     gap: 50%;
@@ -893,30 +983,30 @@ animation: shake 3s ease 0s 1 normal none;
 
 
 @keyframes shake {
+
   0%,
   100% {
-	transform: translateX(0%);
-	transform-origin: 50% 50%;
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
   }
 
   15% {
-	transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
   }
 
   30% {
-	transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
   }
 
   45% {
-	transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
   }
 
   60% {
-	transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
   }
 
   75% {
-	transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
   }
 }
-

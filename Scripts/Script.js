@@ -3,11 +3,6 @@ let texteBar = document.getElementById("TexteBar");
 let switchText = document.getElementById("SwitchTexte");
 const frSections = ["Mathys Moles.", "Gameplay programmeur.", "Modulaire.", "Passionne.", "Motive.", "Game designer.", "Etudiant a ISART DIGITAL."];
 const enSections = [   "Mathys Moles.",  "Gameplay Programmer.",     "Modular.",    "Passionate.",    "Motivated.",    "Game Designer.",    "Student at ISART DIGITAL."];
-let frFlag = document.getElementById("frFlag");
-let enFlag = document.getElementById("enFlag");
- const frStyle = window.getComputedStyle(frFlag);
-    const enStyle = window.getComputedStyle(enFlag);
-
 
 let currentLang = true;
 
@@ -192,26 +187,7 @@ tradButton.addEventListener("click", ChangeLang);
 
 function ChangeLang()
 {
-   
-
-    // Appliquer les valeurs de enFlag à frFlag
-    if (currentLang) {
-     frFlag.style.top = "20%";
-    frFlag.style.left = "40%";
-    frFlag.style.zIndex = "-1";
-
-    enFlag.style.top = "20%";
-    enFlag.style.left = "-40%";
-    enFlag.style.zIndex = "1";
-} else {
-    frFlag.style.top = "20%";
-    frFlag.style.left = "20%";
-    frFlag.style.zIndex = "1";
-
-    enFlag.style.top = "20%";
-    enFlag.style.left = "-20%";
-    enFlag.style.zIndex = "-1";
-}
+  console.log("click");
 
     let lang;
     lang = currentLang? "fr" : "en";
