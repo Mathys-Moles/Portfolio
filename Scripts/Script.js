@@ -1,6 +1,7 @@
 //=========================
 // VARIABLES
 //=========================
+//Current
 let texteBar = document.getElementById("TexteBar");
 let switchText = document.getElementById("SwitchTexte");
 
