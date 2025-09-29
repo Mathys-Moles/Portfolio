@@ -4,7 +4,6 @@
 @font-face {
   font-family: "Cloudy";
   src: url("../Assets/font/Cloudy-0W244.ttf") format("truetype");
-
 }
 
 /* From Uiverse.io by Shoh2008 */
@@ -110,7 +109,7 @@ canvas {
 body {
   font-family: "Chango", sans-serif;
   margin: 0;
-  background-color: #000000;
+  background-color: #223e34;
   z-index: -200;
   /* pointer-events: none; */
 }
@@ -469,36 +468,102 @@ p {
   margin-top: 1rem;
 }
 
-.tech-badges {
-  display: flex;
-  gap: 0.6rem;
-  margin-top: 0.9rem;
-  flex-wrap: wrap;
-}
+ .tech-badges {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      max-width: 600px;
+      margin-top: 20px;
+    }
 
+   /* Badges style brutaliste avec images */
 .badge {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.36rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.86rem;
-  color: var(--muted);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column; /* empile image + texte */
+  align-items: center;
+  justify-content: center;
+ 
+  background-color: #063525;
+  border: 3px solid #23232332;
+  border-radius: 12px;
+  box-shadow: 4px 4px 1px #000000;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+border-color: #03050430;
+  color: #ffffff;
+padding: 3px;
 }
 
-.love {
-  background: rgba(228, 5, 228, 0.312);
-
+.badge img {
+  width: 64px;
+  height: 64px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.lang {
-  background: rgba(5, 212, 198, 0.312);
+.badge p {
+  font-size: 14px;
+  color: #e5dede;
+  margin-top: 8px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.engine {
-  background: rgba(212, 129, 5, 0.312);
+/* Hover brutaliste */
+.badge:hover {
 
+  border-color: #03050430;
+  transform: translate(-6px, -6px) rotate(1deg);
+  box-shadow: 10px 10px 0 #000000, 15px 15px 20px rgba(64, 164, 122, 0.2);
 }
 
+.badge:hover img {
+  transform: scale(1.1);
+  animation: spin-and-zoom 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.badge:hover p {
+  opacity: 1;
+  max-height: 40px; /* fait apparaître le texte */
+}
+
+/* Effet lumineux */
+.badge::before,
+.badge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.badge::before { left: -100%; }
+.badge::after { left: 100%; }
+
+.badge:hover::before { animation: swipeRight 1.5s infinite; }
+.badge:hover::after { animation: swipeLeft 1.5s infinite; }
+
+@keyframes swipeRight { 100% { transform: translateX(200%) skew(-45deg); } }
+@keyframes swipeLeft  { 100% { transform: translateX(-200%) skew(-45deg); } }
+
+@keyframes spin-and-zoom {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+.love { background: rgba(228, 5, 228, 0.312); }
+.lang { background: rgba(5, 212, 198, 0.312); }
+.engine { background: rgba(212, 129, 5, 0.312); }
 .ctas {
   display: flex;
   gap: 0.8rem;
@@ -1010,3 +1075,5 @@ footer {
     transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+
+

@@ -10,7 +10,17 @@
   <title>Portfolio de Mathys Moles | Game Designer & Développeur</title>
 
   <link rel="icon" href="Assets/Touraki/TOURAKI_LOGO.png">
-  <link rel="stylesheet" href="style/Global.css">
+ <link rel="stylesheet" href="style/fonts.css">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/header.css">
+<link rel="stylesheet" href="style/homepage.css">
+<link rel="stylesheet" href="style/about.css">
+<link rel="stylesheet" href="style/projects.css">
+<link rel="stylesheet" href="style/footer.css">
+<link rel="stylesheet" href="style/animations.css">
+<link rel="stylesheet" href="style/responsive.css">
+
+
 </head>
 
 <body>
@@ -21,9 +31,6 @@
       <p class="button ender" id="AboutButton" data-key="About">A propos.</p>
       <p class="button ProjectButton ender" data-key="Proj">Projets.</p>
     </nav>
-
-
-
 
     <div class="checkbox-wrapper-41" id="TardButton">
       <input type="checkbox">
@@ -56,6 +63,7 @@
         <h2 class="fade-up" id="about-title">
           <span id="cloud" class="highlight">Mathys Moles</span> — Game Design &amp; Programmation (ISART)
         </h2>
+        <div  id="switchAbout">
         <p class="fade-up" Data-key="AboutB">
           J’aime raconter des histoires par le gameplay, mêlant mécaniques réfléchies et ambiances immersives.
         </p>
@@ -68,6 +76,7 @@
             de stage 2–4 mois (mai–août 2026)</strong> pour rejoindre une équipe et transformer des idées en expériences
           jouables.
         </p>
+        </div >
         <p class="fade-up meta" Data-key="AboutE">
           Pour créer ce portfolio, je me suis formé en <strong>HTML & CSS</strong> puis en
           <strong>JavaScript</strong> pour enrichir l’interactivité — une preuve concrète de ma curiosité et de ma
@@ -80,20 +89,21 @@
         </div>
 
         <div class="fade-up tech-badges">
-          <span class="badge love">Juiciness Lover🍹</span>
-          <span class="badge love">UX💘</span>
-          <span class="badge love">Game Feel🔥</span>
-          <span class="badge love" Data-key="AboutH">Expérimentateur🧪</span>
-          <span class="badge love" Data-key="AboutI">Créativité🎨</span>
-          <span class="badge love">Gameplay Programmer🕹️</span>
-          <span class="badge love">Bug Hunter🕵️‍♂️</span>
-          <span class="badge lang">C#</span>
-          <span class="badge lang">HTML</span>
-          <span class="badge lang">CSS</span>
-          <span class="badge lang">JavaScript</span>
-          <span class="badge engine">Unity</span>
-          <span class="badge engine">Godot</span>
-          <span class="badge engine">Adobe</span>
+          <span class="badge love" data-type="juiciness">Juiciness Lover🍹</span>
+          <span class="badge love" data-type="ux">UX💘</span>
+          <span class="badge love" data-type="gamefeel">Game Feel🔥</span>
+          <span class="badge love" Data-key="AboutH" data-type="experimentateur">Expérimentateur🧪</span>
+          <span class="badge love" Data-key="AboutI" data-type="créativité">Créativité🎨</span>
+          <span class="badge love" data-type="gameplayprogrammer">Gameplay Programmer🕹️</span>
+          <span class="badge lang" data-type="c#">C#</span>
+          <span class="badge lang" data-type="web">HTML</span>
+          <span class="badge lang" data-type="web">CSS</span>
+          <span class="badge lang" data-type="web">JavaScript</span>
+          <span class="badge engine" data-type="unity">Unity</span>
+          <span class="badge engine" data-type="godot">Godot</span>
+          <span class="badge engine" data-type="adobe">Adobe</span>
+
+          
         </div>
       </div>
     </div>

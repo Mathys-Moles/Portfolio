@@ -1,0 +1,91 @@
+/* #region Footer */
+footer {
+    position: fixed;
+    top: 86vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8vh;
+    z-index: 3;
+}
+
+#Contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0,0,0);
+    gap: 10%;
+    border-radius: 15px;
+}
+
+.contactSection {
+    box-shadow: 17px 18px 20px 0px rgba(0,0,0,0.65);
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    width: 60vh;
+    background-color: #00071983;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px groove rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 20px;
+    pointer-events: auto;
+    transition: all 1s;
+}
+
+.contactSection .secondary {
+    color: rgba(154,154,154,0.534);
+    font-size: 11px;
+}
+
+.contactSection:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.421);
+    background-color: var(--accent);
+    border: 2px inset var(--accent);
+}
+
+.contactSection:hover .principal {
+    color: black;
+}
+
+.contactSection:hover .secondary {
+    color: rgba(0,0,0,0.59);
+}
+
+.infoButton {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40px);
+    border: 2px inset transparent;
+    background-color: transparent;
+    border-radius: 50px;
+    color: transparent;
+    transition: all 0.5s;
+}
+
+.contactSection:hover .infoButton {
+    border: 2px inset #ffffff99;
+    background-color: rgba(0,0,0,0.559);
+    color: rgba(255,255,255,0.589);
+    transform: translateX(-50%) translateY(-50px);
+}
+
+#ScrollButton {
+    position: relative;
+    pointer-events: auto;
+    width: 10vh;
+    display: inline-block;
+}
+
+#ScrollButton:hover {
+    animation: shake 3s ease 0s 1 normal none;
+}
+
+#ScrollButton:active {
+    scale: 1.8;
+}
+/* #endregion */

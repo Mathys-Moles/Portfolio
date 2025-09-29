@@ -1,16 +1,61 @@
 {
-    "StartSwitch" : "Je suis",
-    "Home" : "Accueil",
-    "About" : "A propos",
-    "Proj" : "Projects",
-    "Stick" : "Stage 2–4 mois ✨ <br>✨Mai–Août 2026",
-    "AboutA" : " Plus jeune, je transformais des aquariums en petits mondes vivants — une leçon d’équilibre, de patience et de composition que j’applique aujourd’hui au game design.",
-    "AboutB" : " J’aime raconter des histoires par le gameplay, mêlant mécaniques réfléchies et ambiances immersives.",
-    "AboutC" : " J’ai conçu des <strong>serious games</strong> pour le <strong>Centre Antipoison belge</strong> et la<strong>Croix-Rouge française</strong>, où pédagogie et rigueur technique se rencontrent.",
-    "AboutD" : "   <strong>Curieux, innovant et aventurier</strong>, je vise les studios de jeux vidéo — <strong>recherche activede stage 2–4 mois (mai–août 2026)</strong> pour rejoindre une équipe et transformer des idées en expériences jouables.",
-    "AboutE" : " Pour créer ce portfolio, je me suis formé en <strong>HTML & CSS</strong> puis en <strong>JavaScript</strong> pour enrichir l’interactivité — une preuve concrète de ma curiosité et de ma volonté d’apprendre.",
-    "AboutF" : "Voir mes projets",
-    "AboutG" : "Me contacter",
-    "AboutH" : "Expérimentateur🧪",
-    "AboutI" : "Créativité🎨"
+    "StartSwitch": "Je suis",
+    "Home": "Accueil",
+    "About": "A propos",
+    "Proj": "Projects",
+    "Stick": "Stage 2–4 mois ✨ <br>✨Mai–Août 2026",
+    "AboutA": " Plus jeune, je transformais des aquariums en petits mondes vivants — une leçon d’équilibre, de patience et de composition que j’applique aujourd’hui au game design.",
+    "AboutB": " J’aime raconter des histoires par le gameplay, mêlant mécaniques réfléchies et ambiances immersives.",
+    "AboutC": " J’ai conçu des <strong>serious games</strong> pour le <strong>Centre Antipoison belge</strong> et la<strong>Croix-Rouge française</strong>, où pédagogie et rigueur technique se rencontrent.",
+    "AboutD": "   <strong>Curieux, innovant et aventurier</strong>, je vise les studios de jeux vidéo — <strong>recherche activede stage 2–4 mois (mai–août 2026)</strong> pour rejoindre une équipe et transformer des idées en expériences jouables.",
+    "AboutE": " Pour créer ce portfolio, je me suis formé en <strong>HTML & CSS</strong> puis en <strong>JavaScript</strong> pour enrichir l’interactivité — une preuve concrète de ma curiosité et de ma volonté d’apprendre.",
+    "AboutF": "Voir mes projets",
+    "AboutG": "Me contacter",
+    "AboutH": "Expérimentateur🧪",
+    "AboutI": "Créativité🎨",
+
+    "ux0": "<u><strong>Ma passion pour l'interaction humaine :</strong></u> Depuis toujours, je suis fasciné par la manière dont les gens interagissent avec les produits numériques. L’<strong>UX</strong> me passionne car elle combine <em>psychologie, design et technologie</em>. Observer comment de petits détails peuvent améliorer l'expérience utilisateur me motive profondément.</p>",
+    "ux1": "<u><strong>La créativité au service de l'efficacité :</strong></u> L’UX me permet de <strong>créer des interfaces intuitives et agréables</strong>, où chaque élément a un but. J’aime réfléchir à des parcours clairs, anticiper les besoins des utilisateurs et tester constamment pour améliorer le produit.",
+    "ux2": "<u><strong>Rendre la technologie humaine et accessible :</strong></u> Pour moi, travailler en UX, c’est contribuer à rendre la technologie <em>plus humaine, simple et accessible</em>. C’est cette combinaison de créativité et d’analyse qui rend ce domaine si passionnant et stimulant au quotidien.",
+
+
+ "juiciness0": "juiciness0 fr",
+    "juiciness1": "juiciness1 fr",
+    "juiciness2": "juiciness2 fr",
+
+    "gamefeel0": "gamefeel0 fr",
+    "gamefeel1": "gamefeel1 fr",
+    "gamefeel2": "gamefeel2 fr",
+
+    "experimentateur0": "experimentateur0 fr",
+    "experimentateur1": "experimentateur1 fr",
+    "experimentateur2": "experimentateur2 fr",
+
+    "créativité0": "créativité0 fr",
+    "créativité1": "créativité1 fr",
+    "créativité2": "créativité2 fr",
+
+    "gameplayprogrammer0": "gameplayprogrammer0 fr",
+    "gameplayprogrammer1": "gameplayprogrammer1 fr",
+    "gameplayprogrammer2": "gameplayprogrammer2 fr",
+
+    "c#0": "c#0 fr",
+    "c#1": "c#1 fr",
+    "c#2": "c#2 fr",
+
+    "web0": "web0 fr",
+    "web1": "web1 fr",
+    "web2": "web2 fr",
+
+    "unity0": "unity0 fr",
+    "unity1": "unity1 fr",
+    "unity2": "unity2 fr",
+
+    "godot0": "godot0 fr",
+    "godot1": "godot1 fr",
+    "godot2": "godot2 fr",
+
+    "adobe0": "adobe0 fr",
+    "adobe1": "adobe1 fr",
+    "adobe2": "adobe2 fr"
 }

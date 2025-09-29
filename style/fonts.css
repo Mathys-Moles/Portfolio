@@ -1,0 +1,9 @@
+/* #region Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Fascinate&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url("https://use.typekit.net/qzi6gbk.css");
+
+@font-face {
+    font-family: "Cloudy";
+    src: url("../Assets/font/Cloudy-0W244.ttf") format("truetype");
+}
+/* #endregion */

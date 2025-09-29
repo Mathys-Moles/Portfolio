@@ -1,50 +1,32 @@
-//VAR
+//=========================
+// VARIABLES
+//=========================
 let texteBar = document.getElementById("TexteBar");
 let switchText = document.getElementById("SwitchTexte");
+
 const frSections = ["Mathys Moles.", "Gameplay programmeur.", "Modulaire.", "Passionne.", "Motive.", "Game designer.", "Etudiant a ISART DIGITAL."];
-const enSections = [   "Mathys Moles.",  "Gameplay Programmer.",     "Modular.",    "Passionate.",    "Motivated.",    "Game Designer.",    "Student at ISART DIGITAL."];
+const enSections = ["Mathys Moles.", "a Gameplay Programmer.", "Modular.", "Passionate.", "Motivated.", "a Game Designer.", "Student at ISART DIGITAL."];
 
 let currentLang = true;
-
 let sections;
-ChangeLang();
 
-//USE
-document.getElementById("ContactButton").addEventListener("click", () => {
-
-    let contacts = Array.from(document.getElementsByClassName("contactSection"));
-
-    contacts.forEach(element => {
-        BackFlashing(element, 1000, "rgb(255, 255, 255)");
-    element.style.transform = "scale(1.1)";
-    setTimeout(()=>{element.style.transform = "scale(1)";},500);
-    });
-  
-    
+let badgeButton = Array.from(document.getElementsByClassName("badge"));
+let badgeToTexte = {};
+badgeButton.forEach(badge => {
+    badgeToTexte[badge.dataset.type] = badge.dataset.type;
 });
 
-Flashing(texteBar, 500, "rgb(255, 255, 255)", "rgba(255, 255, 255, 0)", true);
+let conteneur = document.getElementById("switchAbout");
+let paragraphes = conteneur.querySelectorAll("p");
 
-setTimeout(() => {
-    let lCount = 0;
-    setInterval(() => {
-        lCount++;
+let translationsData = null;
+let lang = currentLang ? "fr" : "en";
 
-
-        if (lCount > sections.length - 1) {
-            lCount = 0;
-        }
-
-        EraseTextGradually(switchText, sections[lCount], 100);
-
-    }, 5000);
-
-}, 3000);
-
-//FUNCTION
+//=========================
+// FONCTIONS UTILES
+//=========================
 function Flashing(pObject, pInterval, pInitColor, pEndColor, pLoop = false) {
     pObject.style.transition = `${pInterval * 0.001}s ease`;
-
     if (pLoop) {
         setInterval(() => {
             pObject.style.color = (pObject.style.color === pInitColor) ? pEndColor : pInitColor;
@@ -58,14 +40,11 @@ function BackFlashing(pObject, pInterval, pEndColor) {
     pObject.style.backgroundColor = pEndColor;
     setTimeout(() => {
         pObject.style.backgroundColor = lColor;
-
-
     }, pInterval);
 }
 
 function EraseTextGradually(pElement, pWord, pInterval = 200) {
     let text = pElement.textContent;
-
     const eraser = setInterval(() => {
         if (text.length > 0) {
             text = text.slice(0, -1);
@@ -83,74 +62,125 @@ function WriteTextGradually(pElement, pWord, pInterval = 200) {
     const lWriter = setInterval(() => {
         if (count < lLength) {
             count++;
-            pElement.textContent = pWord.slice(0, count);
+            pElement.innerHTML = pWord.slice(0, count);
         } else {
             clearInterval(lWriter);
         }
     }, pInterval);
 }
 
-//#region scrollButton
-let elements = Array.from(document.getElementsByClassName("ProjectButton"));
+//=========================
+// CHARGEMENT ET TRADUCTION
+//=========================
+async function loadTranslations() {
+    lang = currentLang ? "fr" : "en";
+    const response = await fetch("../Traduction/" + lang + ".json");
+    translationsData = await response.json();
+}
 
+async function ChangeLang() {
+    currentLang = !currentLang;
+    sections = currentLang ? frSections : enSections;
+    await loadTranslations();
+
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.innerHTML = translationsData[key];
+    });
+}
+
+//=========================
+// BOUCLE SECTIONS
+//=========================
+ChangeLang();
+
+Flashing(texteBar, 500, "rgb(255, 255, 255)", "rgba(255, 255, 255, 0)", true);
+
+setTimeout(() => {
+    let lCount = 0;
+    setInterval(() => {
+        lCount++;
+        if (lCount > sections.length - 1) lCount = 0;
+        EraseTextGradually(switchText, sections[lCount], 100);
+    }, 5000);
+}, 3000);
+
+//=========================
+// BADGES
+//=========================
+badgeButton.forEach(element => {
+    element.addEventListener("click", async () => {
+        if (!translationsData) await loadTranslations();
+        const key = element.dataset.type;
+
+        let count = 0;
+        paragraphes.forEach(p => {
+            const bTexte = translationsData[`${key}${count}`];
+            console.log(`${key}${count}`);
+
+            EraseTextGradually(p, bTexte, 10);
+            count++;
+        });
+    });
+});
+
+//=========================
+// CONTACTS
+//=========================
+document.getElementById("ContactButton").addEventListener("click", () => {
+    let contacts = Array.from(document.getElementsByClassName("contactSection"));
+    contacts.forEach(element => {
+        BackFlashing(element, 1000, "rgb(255, 255, 255)");
+        element.style.transform = "scale(1.1)";
+        setTimeout(() => { element.style.transform = "scale(1)"; }, 500);
+    });
+});
+
+//=========================
+// SCROLL
+//=========================
+let elements = Array.from(document.getElementsByClassName("ProjectButton"));
 elements.forEach(element => {
     element.addEventListener("click", () => {
-    document.getElementById("Projects").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+        document.getElementById("Projects").scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
-});
-
 
 document.getElementById("AboutButton").addEventListener("click", () => {
-    document.getElementById("about").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
 document.getElementById("HomePageButton").addEventListener("click", () => {
-    document.getElementById("HomePage").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    document.getElementById("HomePage").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 const SCROLL_BUTTON = document.getElementById("ScrollButton");
 let scrollValue = window.innerHeight;
 SCROLL_BUTTON.addEventListener("click", () => {
-    window.scrollBy({
-        top: scrollValue,
-        left: 0,
-        behavior: "smooth"
-    });
+    window.scrollBy({ top: scrollValue, left: 0, behavior: "smooth" });
 });
 
 const buttons = document.querySelectorAll("nav p.button");
-
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-        // On enlève active de tous
         buttons.forEach(b => b.classList.remove("active"));
-        // On ajoute active au bouton cliqué
         btn.classList.add("active");
     });
 });
 
-window.addEventListener("scroll", FlipButton);
-function FlipButton() {
+window.addEventListener("scroll", () => {
     if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
         SCROLL_BUTTON.style.transform = "rotate(180deg)";
         scrollValue = -document.documentElement.scrollHeight;
-    }
-    else {
+    } else {
         SCROLL_BUTTON.style.transform = "rotate(0deg)";
         scrollValue = window.innerHeight;
     }
-}
+});
 
-//#endregion
-
+//=========================
+// FADE-UP INTERSECTION
+//=========================
 document.addEventListener("DOMContentLoaded", () => {
     const section = document.getElementById('about');
     const elements = section.querySelectorAll('.fade-up');
@@ -169,37 +199,16 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
 });
 
+//=========================
+// MAIL
+//=========================
 document.getElementById("SendMail").addEventListener("click", () => {
     window.location.href = "mailto:mathysmoles@gmail.com";
-    setTimeout(() => {
-        navigator.clipboard.writeText("mathysmoles@gmail.com");
-    }, 1000);
+    setTimeout(() => { navigator.clipboard.writeText("mathysmoles@gmail.com"); }, 1000);
 });
 
-
-///TRADUCTION
+//=========================
+// TRADUCTION BUTTON
+//=========================
 let tradButton = document.getElementById("TardButton");
 tradButton.addEventListener("click", ChangeLang);
-
-
-
-   
-
-function ChangeLang()
-{
-  console.log("click");
-
-    let lang;
-    lang = currentLang? "fr" : "en";
-    sections = currentLang? frSections : enSections;
-      fetch("../Traduction/"+lang + ".json")
-    .then(response => response.json())
-    .then(translations => {
-    
-      document.querySelectorAll("[data-key]").forEach(el => {
-        let key = el.getAttribute("data-key");
-        el.innerHTML = translations[key]; 
-      });
-    });
-    currentLang = !currentLang;
-}

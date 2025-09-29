@@ -15,7 +15,7 @@ const MAX_SPAWN_ATTEMPTS = 20;
 const EXPLOSION_CHANCE = 0.1;
 
 // Decorative bubble settings
-let DECORATIVE_BUBBLES = 40;
+let DECORATIVE_BUBBLES = 50;
 const DECOR_MIN_RADIUS = 10;
 const DECOR_MAX_RADIUS = 25;
 const DECOR_RESPAWN_RATE = 0.05;

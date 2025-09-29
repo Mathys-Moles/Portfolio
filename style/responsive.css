@@ -1,0 +1,22 @@
+/* #region Responsive */
+@media (max-width: 880px) {
+    .about-inner { flex-direction: column; align-items: flex-start; }
+    .about-visual { width: 100%; flex: 1 1 auto; }
+    .visual-card { height: 220px; }
+}
+
+@media (max-width: 768px) {
+    .principal, .secondary, .infoButton, #about img, #Sticker, #pofile, #ProjectDescrib, #ProjectTitel, #SideCollab, #SideTags {
+        display: none;
+    }
+    #Gamplay { width: 100%; }
+    header { justify-content: center; width: 100%; font-size: 12px; }
+    .checkbox-wrapper-41 { scale: 0.5; }
+    #Contact { width: 0; gap: 50%; }
+    #AboutTexte { padding: 0; }
+}
+
+@media (max-width: 600px) {
+    .poster { display: none; }
+}
+/* #endregion */

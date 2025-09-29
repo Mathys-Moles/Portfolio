@@ -1,0 +1,129 @@
+/* #region Projects & ProjectScreen */
+#Projects {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 13vh 9% 16vh 9%;
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: 400px;
+    gap: 50px;
+}
+
+#BackProjects {
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-image: url(../Assets/background/TOURAKI_WEB.png);
+}
+
+.projectCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: auto;
+    background: linear-gradient(to bottom, rgba(252, 252, 252, 0.104), rgba(0, 0, 0, 0.564));
+    border: 2px solid rgba(255, 255, 255, 0.178);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.221);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0 0 10px 0;
+    transition: all 0.2s;
+}
+
+.projectCard:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.412);
+    scale: 1.1;
+}
+
+.projectCard p {
+    color: rgba(231, 231, 231, 0.915);
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 0 20px;
+    border: 2px solid rgba(255, 255, 255, 0.178);
+    border-radius: 20px;
+}
+
+.projectCard video {
+    height: 50%;
+    width: 100%;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    margin: 0 0 12px 0;
+    padding: 2px;
+    color: rgba(199, 199, 199, 0.807);
+    border: 2px solid rgba(255, 255, 255, 0.319);
+    background-color: rgba(198, 182, 136, 0.055);
+    border-radius: 20px;
+}
+
+/* ProjectScreen */
+#ProjectScreen {
+    overflow: auto;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.437);
+    transition: all 0.5s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#Container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.442);
+    display: flex;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 70%;
+}
+
+#Column {
+    flex: 1;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Gamplay {
+    width: 90%;
+    max-height: 70vh;
+    border-radius: 40px;
+}
+
+.tag, .collab {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+}
+/* #endregion */
