@@ -17,6 +17,10 @@
 
     color: var(--text);
     font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+
+    background: #000000;
+background: linear-gradient(to top, #000000 54%, #D0F1FF 87%, #FFCCDF 100%);
+
 }
 
 .about-inner {
