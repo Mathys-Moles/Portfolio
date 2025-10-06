@@ -75,7 +75,7 @@ function WriteTextGradually(pElement, pWord, pInterval = 200) {
 //=========================
 async function loadTranslations() {
     lang = currentLang ? "fr" : "en";
-    const response = await fetch("../Json/Traduction/" + lang + ".json");
+    const response = await fetch("Scripts/Traduction/" + lang + ".json");
     translationsData = await response.json();
 }
 
