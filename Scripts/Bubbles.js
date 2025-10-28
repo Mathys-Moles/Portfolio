@@ -254,12 +254,14 @@ canvas.addEventListener('click',(e)=>{
       
       let source = decodeURIComponent(new URL(b.mediaElem.src).pathname);
       source = source.slice(1);
-        console.log(source);
+       
 
        PROJECTS.forEach(project => {
         if(project.video == source || project.poster == source)
         {
- ApplyProjectDetails(project);
+         console.log((project.video == source || project.poster == source));
+
+             ApplyProjectDetails(project);
             ShowDisplay(PROJECT_SCREEN);
         }
            
