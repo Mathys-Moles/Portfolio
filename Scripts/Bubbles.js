@@ -253,8 +253,7 @@ canvas.addEventListener('click',(e)=>{
       explodeBubble(b);
       
       let source = decodeURIComponent(new URL(b.mediaElem.src).pathname);
-      source = source.slice(1);
-       
+      source = source.replace(/^.*?Assets\//, "Assets/");
       console.log(source);
        PROJECTS.forEach(project => {
         console.log(project.video);
