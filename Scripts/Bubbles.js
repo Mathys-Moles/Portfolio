@@ -255,8 +255,10 @@ canvas.addEventListener('click',(e)=>{
       let source = decodeURIComponent(new URL(b.mediaElem.src).pathname);
       source = source.slice(1);
        
-
+      console.log(source);
        PROJECTS.forEach(project => {
+        console.log(project.video);
+
         if(project.video == source || project.poster == source)
         {
          console.log((project.video == source || project.poster == source));
