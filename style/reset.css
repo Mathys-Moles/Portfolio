@@ -214,36 +214,7 @@ nav .ender:hover::after {
 
 
 
-#Sticker {
-  pointer-events: none;
-  color: rgb(255, 255, 255);
-  font-family: "Chango", sans-serif;
-  top: 60%;
-  left: -2.5%;
-  transform: rotate(-15deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.1vw;
 
-  width: 17vw;
-  height: 17vw;
-  position: absolute;
-  background-image: url(../Assets/ion/sticker.png);
-  background-size: cover;
-  transition: scale 0.3s ease;
-}
-
-#Sticker p {
-  -webkit-text-stroke: 0px black;
-  font-family: "Chango", sans-serif;
-  color: rgb(255, 255, 255);
-  transform: rotate(15deg);
-  position: relative;
-  top: 7%;
-  left: 4%;
-}
 
 
 
@@ -561,9 +532,7 @@ padding: 3px;
   50%  { transform: rotate(180deg) scale(1.1); }
   100% { transform: rotate(360deg) scale(1); }
 }
-.love { background: rgba(228, 5, 228, 0.312); }
-.lang { background: rgba(5, 212, 198, 0.312); }
-.engine { background: rgba(212, 129, 5, 0.312); }
+
 .ctas {
   display: flex;
   gap: 0.8rem;

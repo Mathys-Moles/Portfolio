@@ -131,7 +131,7 @@ badgeButton.forEach(element => {
 document.getElementById("ContactButton").addEventListener("click", () => {
     let contacts = Array.from(document.getElementsByClassName("contactSection"));
     contacts.forEach(element => {
-        BackFlashing(element, 1000, "rgb(255, 255, 255)");
+        BackFlashing(element, 1000, "#6db5f9");
         element.style.transform = "scale(1.1)";
         setTimeout(() => { element.style.transform = "scale(1)"; }, 500);
     });

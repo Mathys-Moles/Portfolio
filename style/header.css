@@ -112,26 +112,26 @@ nav .ender:hover::after {
     color: rgb(255, 255, 255);
     font-family: "Chango", sans-serif;
     top: 60%;
-    left: -2.5%;
-    transform: rotate(-15deg);
+    left: -2%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 1.1vw;
-    width: 17vw;
-    height: 17vw;
+    width: 20vw;
+    height:20vw;
     position: absolute;
-    background-image: url(../Assets/ion/sticker.png);
-    background-size: cover;
+    background-image: url(../Assets/ion/POP_UP_CLOUD.png);
+    background-size: 100%;
     transition: scale 0.3s ease;
 }
 
 #Sticker p {
-    -webkit-text-stroke: 0px black;
-    transform: rotate(15deg);
+    -webkit-text-stroke: 1px black;
+   color: rgb(255, 255, 255);
     position: relative;
-    top: 7%;
-    left: 4%;
+    top: -7%;
+    left: 1%;
 }
 /* #endregion */

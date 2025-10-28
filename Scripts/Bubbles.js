@@ -247,6 +247,25 @@ canvas.addEventListener('mousemove',e=>{
 canvas.addEventListener('click',(e)=>{
   const rect=canvas.getBoundingClientRect();
   const mx=e.clientX-rect.left,my=e.clientY-rect.top;
-  bubbles.forEach(b=>{if(b.alive&&Math.hypot(mx-b.x,my-b.y)<b.radius)explodeBubble(b);});
+  bubbles.forEach(b=>{
+    if(b.alive&&Math.hypot(mx-b.x,my-b.y)<b.radius)
+    {
+      explodeBubble(b);
+      
+      let source = decodeURIComponent(new URL(b.mediaElem.src).pathname);
+      source = source.slice(1);
+        console.log(source);
+
+       PROJECTS.forEach(project => {
+        if(project.video == source || project.poster == source)
+        {
+ ApplyProjectDetails(project);
+            ShowDisplay(PROJECT_SCREEN);
+        }
+           
+       });
+      console.log()
+    }
+  });
   decorBubbles.forEach(db=>{if(db.alive&&Math.hypot(mx-db.x,my-db.y)<db.radius)explodeBubble(db);});
 });

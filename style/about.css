@@ -98,7 +98,9 @@ background: linear-gradient(to top, #000000 54%, #D0F1FF 87%, #FFCCDF 100%);
     opacity: 1;
     max-height: 40px;
 }
-
+.love { background: rgba(228, 5, 228, 0.312); }
+.lang { background: rgba(5, 212, 198, 0.312); }
+.engine { background: rgba(212, 129, 5, 0.312); }
 @keyframes spin-and-zoom {
     0% { transform: rotate(0deg) scale(1); }
     50% { transform: rotate(180deg) scale(1.1); }
