@@ -8,6 +8,14 @@
 
 /* From Uiverse.io by Shoh2008 */
 /* From Uiverse.io by Shoh2008 */
+:root {
+    --bg: #0f1115;
+    --card: #0b0c0f;
+    --muted: #9aa0a6;
+    --accent: #6db5f9;
+    --text: #f7f7f7;
+}
+
 .checkbox-wrapper-41 {
   --size: 100px;
 }
@@ -149,7 +157,7 @@ width: 100%;       /* Toujours 100% pour coller au viewport */
   font-size: 180%;
 
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+  border-radius: 0 5px;
 
   box-shadow: 17px 18px 20px 0px rgba(0, 0, 0, 0.65);
 
@@ -372,13 +380,7 @@ nav .ender:hover::after {
 /* #endregion */
 
 /* #region About */
-:root {
-  --bg: #0f1115;
-  --card: #0b0c0f;
-  --muted: #9aa0a6;
-  --accent: #6db5f9;
-  --text: #f7f7f7;
-}
+
 
 .about-section {
   min-height: 100vh;

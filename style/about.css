@@ -1,11 +1,5 @@
 /* #region About */
-:root {
-    --bg: #0f1115;
-    --card: #0b0c0f;
-    --muted: #9aa0a6;
-    --accent: #6db5f9;
-    --text: #f7f7f7;
-}
+
 
 .about-section {
     min-height: 100vh;
@@ -21,7 +15,7 @@
 
    
 background: linear-gradient(to top, #000000 54%, #D0F1FF 87%, #FFCCDF 100%);
- background: #000000;
+ background: var(--bg);
 
 }
 

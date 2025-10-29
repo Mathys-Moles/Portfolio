@@ -10,115 +10,222 @@ const MAYSON = '<a href="https://www.linkedin.com/in/ma%C3%AFtson-pierre-7498273
 const PROJECTS = [
 
     {
-        Title: 'remix ou est Charlie - Algo Crowd 🔍',
-        resume: `<strong>Godot Jam – Invisible</strong> 👀.<br>Pour ce projet, j'ai voulu <em>réinventer un concept</em> pour le sublimer, ce qui m'a permis de découvrir<span style="color: #59cdacff; font-weight: bold;"> la beauté de l'algorithme de boids.</span>`,
-description: ` <p>Dans ce projet, nous avons décidé de tout miser sur l’<span class="highlight">originalité</span> ✨, en déformant le thème <span class="highlight">Invisible</span>. Comme l’écrivait Edgar Allan Poe dans <em>L’Homme des foules</em>, être invisible peut aussi vouloir dire ne pas être vu, perdre son identité. J’ai étudié l’algorithme de <span class="highlight">crowd</span> afin de donner vie et comportement à notre foule, avec laquelle le joueur pouvait interagir.</p>
+        Title: 'Remix Where’s Waldo - Crowd Algo 🔍',
+        resume: `<strong>Godot Jam – Invisible</strong> 👀.<br>For this project, I wanted to <em>reinvent a concept</em> to elevate it, which allowed me to discover<span style="color: #59cdacff; font-weight: bold;"> the beauty of the boids algorithm.</span>`,
+        description: ` <p>In this project, we decided to focus entirely on <span class="highlight">originality</span> ✨, by twisting the theme <span class="highlight">Invisible</span>. As Edgar Allan Poe wrote in <em>The Man of the Crowd</em>, being invisible can also mean not being seen, losing one’s identity. I studied the <span class="highlight">crowd</span> algorithm to give life and behavior to our crowd, with which the player could interact.</p>
 
-  <h4>Direction artistique minimaliste</h4>
-  <p>Ce projet fut un vrai <span class="highlight">challenge visuel</span>. Nous n’avions que 4 jours et un artiste à temps partiel. Pour pallier ce manque, j’ai conçu un système permettant d’obtenir une foule entièrement variée sans multiplier les assets. Nous avons utilisé un <span class="highlight">corps de base neutre</span> et plusieurs accessoires pour générer des humains uniques et vivants dans la foule.</p>
-  <div class="image-placeholder">[Image de concept art ou illustration]</div>
+  <h4>Minimalist Artistic Direction</h4>
+  <p>This project was a true <span class="highlight">visual challenge</span>. We had only 4 days and a part-time artist. To overcome this, I designed a system to create a fully varied crowd without multiplying assets. We used a <span class="highlight">neutral base body</span> and several accessories to generate unique, lively characters in the crowd.</p>
+  <div class="image-placeholder">[Concept art or illustration]</div>
 
-  <h4>Donner vie à la foule</h4>
-  <p>L’animation manuelle de chaque personnage aurait été trop coûteuse. J’ai mis en place un effet de <span class="highlight">“shake” subtil</span>, simulant la marche et donnant du rythme au mouvement collectif.</p>
-  <div class="image-placeholder">[GIF ou animation de la foule]</div>
+  <h4>Bringing the Crowd to Life</h4>
+  <p>Animating each character manually would have been too costly. I implemented a subtle <span class="highlight">“shake” effect</span>, simulating walking and giving rhythm to the collective movement.</p>
+  <div class="image-placeholder">[GIF or crowd animation]</div>
 
-  <h4>Algorithme de crowd</h4>
-  <p>Le cœur du gameplay repose sur l’algorithme de <span class="highlight">boids</span>, adapté pour simuler des interactions sociales crédibles. Chaque individu réagit à la position du joueur tout en conservant une cohésion naturelle. Ce fut ma première vraie expérience avec la <span class="highlight">programmation comportementale en temps réel</span>.</p>
-  <div class="image-placeholder">[Schéma de l’algorithme ou code]</div>
+  <h4>Crowd Algorithm</h4>
+  <p>The heart of the gameplay relies on the <span class="highlight">boids</span> algorithm, adapted to simulate believable social interactions. Each individual reacts to the player’s position while maintaining natural cohesion. This was my first real experience with <span class="highlight">real-time behavioral programming</span>.</p>
+  <div class="image-placeholder">[Algorithm diagram or code]</div>
 
-  <h4>Résultat final</h4>
-  <p>En seulement quatre jours, nous avons atteint un rendu fidèle à notre intention : exprimer l’invisibilité à travers la foule. Cette expérience a confirmé mon envie de me spécialiser dans la <span class="highlight">programmation gameplay</span> et les systèmes émergents.</p>
-  <div class="image-placeholder">[Capture finale du jeu]</div>`,
-        tags: ['love/Game Jame','love/Algorythme', 'love/Puzzel','engine/Godot','lang/C#'],
-        collabs: [`Collaborateurs :`, `GD : <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MUHAMMAD}`, `Dev : <br> ${MATHYS}`, `Art : <br> ${CHLOE}`],
+  <h4>Final Result</h4>
+  <p>In just four days, we achieved a result true to our intention: expressing invisibility through the crowd. This experience confirmed my desire to specialize in <span class="highlight">gameplay programming</span> and emergent systems.</p>
+  <div class="image-placeholder">[Final game screenshot]</div>`,
+        tags: ['love/Game Jame','love/Algorithm', 'love/Puzzle','love/Solo Dev','engine/Godot','lang/C#'],
+        collabs: [`Collaborators:`, `GD : <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MUHAMMAD}`, `Dev : <br> ${MATHYS}`, `Art : <br> ${CHLOE}`],
         video: 'Assets/Demo/AlgoVersGamePlay-GameJam.mp4',
         poster: 'Assets/Demo/AlgoVersGamePlay-GameJam.mp4'
     },
     {
         Title: 'Miam - Serious Game 🍄',
-        resume: `  <strong>Projet réalisé pour le Centre Antipoison Belge 🍯</strong><br>
-    Je devais apprendre à mes joueurs différents concepts, et j'ai tout fait pour lier cela à une expérience à la fois 
-    <em>fun</em> et <span style="color: #59cdacff; font-weight: bold;">innovante</span>, afin que tout le monde puisse y jouer.`,
-        description: ` <p>Projet réalisé pour le <span class="highlight">Centre Antipoison Belge</span> 🍯. Le but de ce projet était de rendre l'<span class="highlight">apprentissage de la nutrition</span> accessible et ludique, tout en mettant en avant les <span class="highlight">bienfaits des produits naturels</span> 🌿🍎. Il vise également à <span class="highlight">prévenir contre les dangers alimentaires</span> ☠️, en apprenant à reconnaître les aliments <span class="highlight">comestibles</span> — ou non ❌.</p>
+        resume: `  <strong>Project for the Belgian Poison Center 🍯</strong><br>
+    I had to teach players various concepts, and I did everything to link it to an experience that was both 
+    <em>fun</em> and <span style="color: #59cdacff; font-weight: bold;">innovative</span>, so that anyone could enjoy it.`,
+        description: ` <p>Project realized for the <span class="highlight">Belgian Poison Center</span> 🍯. The goal of this project was to make <span class="highlight">learning about nutrition</span> accessible and fun, while highlighting the <span class="highlight">benefits of natural products</span> 🌿🍎. It also aimed to <span class="highlight">prevent food hazards</span> ☠️, teaching players to recognize <span class="highlight">edible</span> — or not ❌ — foods.</p>
 
-  <h4>Le challenge principal</h4>
-  <p>La plus grande difficulté a été de trouver comment enseigner un sujet aussi <span class="highlight">complexe</span> à travers un simple <span class="highlight">jeu mobile</span>, tout en gardant le <span class="highlight">joueur engagé</span> sur l’application. Pour cela, j’ai exploré toutes mes <span class="highlight">contraintes</span> afin de mieux y répondre :</p>
+  <h4>Main Challenge</h4>
+  <p>The biggest difficulty was figuring out how to teach such a <span class="highlight">complex</span> topic through a simple <span class="highlight">mobile game</span>, while keeping the <span class="highlight">player engaged</span>. To do this, I explored all my <span class="highlight">constraints</span> to respond effectively:</p>
   <ul>
-    <li>Le jeu devait tourner sur de <span class="highlight">vieux téléphones</span> afin de toucher un maximum d’utilisateurs.</li>
-    <li>Il devait être <span class="highlight">fun</span>, avec une <span class="highlight">mécanique simple</span> que l’utilisateur connaissait déjà.</li>
-    <li>Il fallait que les joueurs <span class="highlight">progressent réellement</span> et puissent constater leur <span class="highlight">évolution</span>.</li>
+    <li>The game had to run on <span class="highlight">old phones</span> to reach as many users as possible.</li>
+    <li>It had to be <span class="highlight">fun</span>, with a <span class="highlight">simple mechanic</span> familiar to users.</li>
+    <li>Players had to <span class="highlight">actually progress</span> and see their <span class="highlight">growth</span>.</li>
   </ul>
-  <div class="image-placeholder">[Schéma ou mockup des contraintes techniques]</div>
+  <div class="image-placeholder">[Diagram or mockup of technical constraints]</div>
 
-  <h4>Exploration des mécaniques</h4>
-  <p>Pour atteindre ces objectifs, j’ai exploré plusieurs possibilités. J’ai d’abord pensé à <span class="highlight">titier</span> (un mot signifiant “l’envie de gagner”), puis à un <span class="highlight">jeu multijoueur</span>.</p>
-  <p>L’approche multijoueur présentait plusieurs avantages : apprendre avec des <span class="highlight">amis</span> ou <span class="highlight">proches</span> favorise la <span class="highlight">motivation</span>. J’ai donc imaginé un <span class="highlight">TCG (Trading Card Game)</span> pour que les joueurs puissent <span class="highlight">s’affronter</span> et <span class="highlight">apprendre en s’amusant</span> : <strong>Learn to Win</strong>.</p>
-  <div class="image-placeholder">[Exemple de carte ou gameplay TCG]</div>
+  <h4>Exploring Mechanics</h4>
+  <p>To achieve these goals, I explored several options. I first considered <span class="highlight">titier</span> (a word meaning “desire to win”), then a <span class="highlight">multiplayer game</span>.</p>
+  <p>The multiplayer approach had several advantages: learning with <span class="highlight">friends</span> or <span class="highlight">family</span> increases <span class="highlight">motivation</span>. I then imagined a <span class="highlight">TCG (Trading Card Game)</span> so players could <span class="highlight">compete</span> and <span class="highlight">learn while having fun</span>: <strong>Learn to Win</strong>.</p>
+  <div class="image-placeholder">[Example of card or TCG gameplay]</div>
 
-  <h4>Les limites du multijoueur</h4>
-  <p>Mais cette approche posait plusieurs problèmes :</p>
+  <h4>Limits of Multiplayer</h4>
+  <p>But this approach posed several problems:</p>
   <ul>
-    <li>Le joueur aurait besoin de <span class="highlight">connaître quelqu’un</span> avec qui se lancer, ce qui réduisait ma <span class="highlight">clientèle potentielle</span>.</li>
-    <li>Il fallait réussir à <span class="highlight">camoufler le cœur pédagogique</span> du jeu dans le TCG sans rendre le concept trop complexe.</li>
+    <li>The player would need to <span class="highlight">know someone</span> to start, limiting the <span class="highlight">potential audience</span>.</li>
+    <li>The <span class="highlight">educational core</span> had to be hidden in the TCG without making it too complex.</li>
   </ul>
-  <p>J’ai donc conservé l’idée des <span class="highlight">cartes</span>, mais avec une approche <span class="highlight">solo</span>.</p>
+  <p>I kept the idea of <span class="highlight">cards</span>, but with a <span class="highlight">solo</span> approach.</p>
 
-  <h4>Naissance du concept « Tu manges ou tu ne manges pas »</h4>
-  <p>En m’inspirant des <span class="highlight">sites de rencontre</span>, j’ai trouvé que le système de <span class="highlight">like / dislike</span> était très simple à prendre en main et désormais <span class="highlight">naturel</span> pour beaucoup d’utilisateurs. C’est ainsi qu’est né mon concept : <strong><span class="highlight">Tu manges ou tu ne manges pas</span></strong>.</p>
-  <p>Pour rendre le concept encore plus engageant, j’ai ajouté une <span class="highlight">couche humoristique</span> et un <span class="highlight">système de survie</span> : le joueur doit <span class="highlight">survivre</span> le plus longtemps possible, en se <span class="highlight">nourrissant de produits naturels</span> pour maximiser ses <span class="highlight">points</span> sans mourir.</p>
-  <div class="image-placeholder">[Mockup gameplay final]</div>
+  <h4>Birth of “Eat or Not” Concept</h4>
+  <p>Inspired by <span class="highlight">dating apps</span>, I found that the <span class="highlight">like/dislike</span> system was simple and now <span class="highlight">intuitive</span> for many users. Thus was born my concept: <strong><span class="highlight">Eat or Not</span></strong>.</p>
+  <p>To make it more engaging, I added a <span class="highlight">humorous layer</span> and a <span class="highlight">survival system</span>: the player must <span class="highlight">survive</span> as long as possible, eating <span class="highlight">natural products</span> to maximize <span class="highlight">points</span> without dying.</p>
+  <div class="image-placeholder">[Final gameplay mockup]</div>
 
-  <h4>Résultat</h4>
-  <p>Ce projet m’a permis d’allier <span class="highlight">pédagogie</span>, <span class="highlight">game design</span> et <span class="highlight">contraintes techniques</span>. En simplifiant le <span class="highlight">gameplay</span>, en gardant l’<span class="highlight">apprentissage</span> au cœur de l’expérience et en ajoutant une dimension <span class="highlight">humoristique</span> et de <span class="highlight">survie</span>, j’ai pu créer un jeu <span class="highlight">accessible</span>, <span class="highlight">amusant</span> et <span class="highlight">éducatif</span>, qui fonctionne sur une large gamme de téléphones et garde les joueurs <span class="highlight">engagés</span> tout en apprenant.</p>
-  <div class="image-placeholder">[Capture finale du jeu]</div>`,
+  <h4>Result</h4>
+  <p>This project allowed me to combine <span class="highlight">pedagogy</span>, <span class="highlight">game design</span>, and <span class="highlight">technical constraints</span>. By simplifying <span class="highlight">gameplay</span>, keeping <span class="highlight">learning</span> central, and adding a <span class="highlight">humorous and survival</span> dimension, I created a <span class="highlight">accessible</span>, <span class="highlight">fun</span>, and <span class="highlight">educational</span> game that runs on a wide range of phones and keeps players <span class="highlight">engaged</span> while learning.</p>
+  <div class="image-placeholder">[Final game screenshot]</div>`,
         tags: ['love/Serious Game', 'love/OBG' , 'love/Solo Dev', 'engine/Mobile','engine/Godot','lang/C#' ],
-        collabs: [`Collaborateurs :`, `Dev : <br> ${MATHYS}`, `Art : <br> ${CHLOE}`],
+        collabs: [`Collaborators:`, `Dev : <br> ${MATHYS}`, `Art : <br> ${CHLOE}`],
         video: 'Assets/Demo/Miam - Serious Game.mp4',
         poster: 'Assets/Demo/Miam - Serious Game.mp4'
     },
     {
         Title: 'Hope - Survival Game 🐀',
-        resume: `   <strong>Prototype réalisé avec la Croix-Rouge ✚</strong><br>
-    J’ai voulu faire passer un message fort à travers le <u>gameplay</u> : 
-    <span style="color: #e74c3c; font-weight: bold;">il est temps d’agir</span>.  
-    Le jeu se termine par une <span style="color: #8e44ad; font-weight: bold;">défaite inévitable 💀</span>, 
-    rappelant que les ressources ne sont pas infinies.`,
-        description: `<b>Prototype</b> réalisé en <u>collaboration</u> avec la Croix-Rouge ✚.<br>Ce projet est une <i>extension</i> de la campagne <b>"Vivre en 2050"</b>.<br>Nous avons tenté d’exprimer, par le <u>gameplay</u>, qu’il était temps d’agir, car les prochaines générations n’auront plus les mêmes opportunités que nous.<br>Le jeu imposera sa fin grâce au <i>level design</i>, épuisant les ressources du joueur en trois jours, et imposant une <b>défaite inévitable</b> 💀.`,
-        tags: ['love/Serious Game','love/Survie', 'love/Naratif Game','engine/Godot','lang/C#'],
-        collabs: [`Collaborateurs :`, `Dev :  <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MAYSON}`, `Art : <br> ${CHLOE}`],
+        resume: `   <strong>Prototype created with the Red Cross ✚</strong><br>
+    I wanted to deliver a strong message through <u>gameplay</u>: 
+    <span style="color: #e74c3c; font-weight: bold;">it’s time to act</span>.  
+    The game ends with an <span style="color: #8e44ad; font-weight: bold;">inevitable defeat 💀</span>, 
+    reminding that resources are not infinite.`,
+        description: `  <p>Prototype developed in collaboration with the <span class="highlight">Red Cross ✚</span>. This project extends the campaign <span class="highlight">"Living in 2050"</span>. We wanted to deliver a strong message through <span class="highlight">gameplay</span>: <strong>it’s time to act</strong>.  
+  The game ends with an <span class="highlight">inevitable defeat 💀</span>, reminding that <span class="highlight">resources are not infinite</span>.</p>
+
+  <h4>Project Context</h4>
+  <p>We had to create a game to support the <span class="highlight">"Living in 2050"</span> campaign by the Red Cross, an initiative raising awareness about <span class="highlight">climate challenges</span> and their human consequences.  
+  The campaign aimed to encourage everyone to <span class="highlight">think today</span> about the actions needed to build a sustainable future.  
+  However, we only had <span class="highlight">two days</span> to design a <span class="highlight">pitch</span> and a <span class="highlight">playable prototype</span>.</p>
+  <div class="image-placeholder">[Poster or visual for "Living in 2050" campaign]</div>
+
+  <h4>Project Challenge</h4>
+  <p>The project had to be <span class="highlight">ultra-accessible</span>:  
+  playable by <span class="highlight">everyone</span> in a very short time, while <span class="highlight">making a deep impression on players</span>.  
+  We needed to create an experience that sparked <span class="highlight">reflection</span> and encouraged players to <span class="highlight">research the topic</span> themselves.</p>
+  <ul>
+    <li>Accessible to a <span class="highlight">wide audience</span>.</li>
+    <li><span class="highlight">Short</span> but <span class="highlight">impactful</span> experience.</li>
+    <li><span class="highlight">Emotional</span> and <span class="highlight">memorable</span> message.</li>
+  </ul>
+  <div class="image-placeholder">[Simple and accessible UI mockup]</div>
+
+  <h4>Game Concept</h4>
+  <p>Players control a <span class="highlight">young orphan girl</span> affected by <span class="highlight">climate migration</span>.  
+  They must <span class="highlight">survive as long as possible</span> in a city, relying on <span class="highlight">inhabitants</span> and available <span class="highlight">resources</span>.</p>
+
+  <p>The game occurs in two distinct phases:</p>
+  <ul>
+    <li><span class="highlight">Day phase:</span> explore the city, interact with inhabitants, discover their stories and acts of cooperation. Dialogue evolves daily, reinforcing <span class="highlight">solidarity</span> and <span class="highlight">resilience</span>.</li>
+    <li><span class="highlight">Night phase:</span> manage collected resources to <span class="highlight">survive</span> until the next day.</li>
+  </ul>
+  <div class="image-placeholder">[Day/Night gameplay phase diagram]</div>
+
+  <p>Each day reflects the <span class="highlight">consequences</span> of the player’s previous actions, creating a natural <span class="highlight">learning loop</span>.  
+  This progression makes every attempt more <span class="highlight">meaningful</span>.</p>
+
+  <h4>An Inevitable Ending</h4>
+  <p>To reinforce the campaign’s message — <strong>act now, not in 2050</strong> — we designed a <span class="highlight">level design</span> that <span class="highlight">gradually depletes resources</span>.  
+  No matter the strategy, the player cannot <span class="highlight">survive more than three days</span>.  
+  This <span class="highlight">inevitable death</span> embodies the idea that, despite good intentions, <span class="highlight">if we don’t act today</span>, future generations cannot be saved.</p>
+  <div class="image-placeholder">[End screen showing inevitable defeat]</div>
+
+  <h4>Result</h4>
+  <p>In just <span class="highlight">two days</span>, we created a prototype that is <span class="highlight">emotional</span> and <span class="highlight">impactful</span>, using <span class="highlight">gameplay</span> as a genuine <span class="highlight">vehicle for social message</span>.  
+  This project reinforced my belief that <span class="highlight">video games</span> are a <span class="highlight">powerful medium</span> to <span class="highlight">educate</span>, <span class="highlight">move</span>, and <span class="highlight">make people think</span>.</p>
+  <div class="image-placeholder">[Final prototype screenshot or title screen]</div>`,
+        tags: ['love/Serious Game','love/Survival', 'love/Narrative Game','engine/Godot','lang/C#'],
+        collabs: [`Collaborators:`, `Dev :  <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MAYSON}`, `Art : <br> ${CHLOE}`],
         video: 'Assets/Demo/Hope.mp4',
         poster: 'Assets/Demo/Hope.mp4'
     },
     {
         Title: 'Tokotem - Sokoban',
-        resume: ` <strong>Premier projet avec plusieurs développeurs 👨‍💻👩‍💻</strong><br>
-    Nous avons voulu faire une <em>promesse simple</em> à nos joueurs, mais qui voulait dire beaucoup.  
-    Alors nous leur avons dit : <span style="color: #59cdacff; font-weight: bold;">« Tu peux grimper. »</span><br>
-    Pour cela, <span style="color: #59cdacff; font-weight: bold;">j'ai dû créer tout un système et une <em>logique 3D</em> dans un moteur 2D</span>`,
-        description: `<b>Premier projet avec plusieurs développeurs 👨‍💻👩‍💻</b><br>Nous avions peu de consignes sur ce projet, l’une d’entre elles était <u>la 2D</u>.<br>Nous voulions un <i>feature</i> simple mais apportant de nombreuses options à nos joueurs.<br>Alors nous avons décidé de donner aux joueurs une consigne aussi simple que "<b>vous pouvez grimper</b> 🧗".<br>De là, notre <b>level design</b> a gagné une nouvelle dimension, avec encore plus d’options ✨.`,
-        tags: ['love/Puzzel', 'love/2D', 'love/Sokoban', 'love/Fake 3D','engine/Godot','lang/C#'],
-        collabs: [`Collaborateurs :`, `${MATHYS} `, `${JACOB} `, `${MUHAMMAD}`],
+        resume: ` <strong>First project with multiple developers 👨‍💻👩‍💻</strong><br>
+    We wanted to make a <em>simple promise</em> to our players, but one that meant a lot.  
+    So we told them: <span style="color: #59cdacff; font-weight: bold;">“You can climb.”</span><br>
+    For this, <span style="color: #59cdacff; font-weight: bold;">I had to create an entire system and a <em>3D logic</em> inside a 2D engine</span>`,
+        description: ` <p>First project with multiple <span class="highlight">developers 👨‍💻👩‍💻</span>.  
+  We had few guidelines, except one: the game had to be <span class="highlight">2D</span>.  
+  We wanted to offer players a <span class="highlight">simple mechanic</span>, yet rich in possibilities.  
+  This gave birth to our promise: <strong>“You can climb.” 🧗</strong></p>
+  <div class="image-placeholder">[Team image or project prototype]</div>
+
+  <h4>Simple Concept, Ambitious Execution</h4>
+  <p>We wanted this simple phrase to open <span class="highlight">new gameplay and level design perspectives</span>.  
+  To achieve this, I had to create <span class="highlight">3D logic inside a 2D engine</span> — a real technical but exciting challenge.</p>
+
+  <h4>Major Technical Challenges</h4>
+  <p>This project proved far more complex than a simple <span class="highlight">Sokoban</span>.  
+  My team and I took a <span class="highlight">risky but unique approach</span>: recreating <span class="highlight">3D depth</span> in a 2D world.</p>
+
+  <p>Our game relied on a <span class="highlight">specific camera angle</span>, requiring manipulation of <span class="highlight">transformation matrices</span> to properly place grid tiles.  
+  Once this base was set, we had to design a coherent <span class="highlight">physical relief</span> allowing players and boxes to move in “3D”.</p>
+  <div class="image-placeholder">[Grid system diagram or simulated 3D visualization]</div>
+
+  <p>To do this, I devised a <span class="highlight">simple but effective logical calculation</span>, linking “visual” coordinates to <span class="highlight">actual positions</span> in the game space.  
+  This system became the core of the <span class="highlight">spatial simulation</span>.</p>
+
+  <h4>Explosion of Possibilities</h4>
+  <p>Our mechanic seemed simple but generated a <span class="highlight">huge variety of situations</span>: over <span class="highlight">50 configurations</span> possible, with different <span class="highlight">levels</span> (0 to 3), <span class="highlight">stacked blocks</span>, <span class="highlight">climbing directions</span>, and <span class="highlight">target blocks</span>.</p>
+  <div class="image-placeholder">[Illustration of different block configurations]</div>
+
+  <p>I had to write <span class="highlight">highly modular code</span> to maintain a clear and adaptable structure.  
+  But this also complicated <span class="highlight">pathfinding</span>.</p>
+
+  <h4>Final Result</h4>
+  <p>The result was extremely satisfying: players could <span class="highlight">climb, move, push</span> and <span class="highlight">solve puzzles</span> that seemed impossible at first.  
+  This project taught me <span class="highlight">level design, modular programming, and 2D/3D logic</span>, a solid foundation for future projects.</p>
+  <div class="image-placeholder">[Final playable level screenshot]</div>`,
+        tags: ['love/Puzzle','love/CoDev','love/Logic', 'engine/Godot','lang/C#'],
+        collabs: [`Collaborators:`, `Dev :  <br> ${MATHYS} <br>  ${MARCO}  <br>  ${MUHAMMAD}`, `Art : <br> ${CHLOE}`],
         video: 'Assets/Demo/TOKOTEM_SOKOBAN.mp4',
-        poster: 'Assets/Demo/TOKOTEM_SOKOBAN.mp4'
+        poster: 'Assets/Demo/Tokotem.mp4'
     },
- 
     {
-        Title: 'Shmup - Musical Game 🎵',
-        resume: '  <strong>Premier projet 🚀</strong><br>Pour moi, il faut toujours <em>exploiter au maximum les armes</em> qui sont mises à notre disposition.<span style="color: #59cdacff; font-weight: bold;"> J ai donc codé tout un système pour que tout puisse être <em>lié aux sons</em>.</span>',
-        description: '<p><b>Premier vrai projet 🚀</b><br>Sur ce projet, <b>j’ai été accompagné d’un sound designer 🎵</b>, et je n’ai pas trouvé de plus bel hommage que de <b>baser la totalité de mon jeu sur ses sons</b> .<br>Que ce soit <b>les mouvements des ennemis</b> jusqu’au moindre <b>comportement de l’espace de jeu</b>, <u><b>tout</b> est régi par le rythme et la musique</u> 🎶.</p>',
-        tags: ['love/Shmup', 'love/Musique', 'love/Solo Dev','engine/Godot','lang/C#' ],
-        collabs: [`Collaborateurs :`, `Dev : <br> ${MATHYS}`, `Art : <br> ${CHLOE} <br> ${MATHYS}`],
+        Title: 'Shmup - Shoot Them Up 🚀',
+        resume: `<strong>First solo project</strong> 👨‍💻.<br>
+    I wanted to <em>combine speed, visuals, and feedback</em>.  
+    This project was the perfect laboratory for <span style="color: #59cdacff; font-weight: bold;">gameplay programming</span> experimentation.`,
+        description: ` <p>My first solo project, developed to experiment with <span class="highlight">gameplay programming</span>.  
+  The goal was to create a <span class="highlight">fast-paced</span>, visually stimulating <span class="highlight">shoot-em-up</span> with a focus on <span class="highlight">player feedback</span>.</p>
+
+  <h4>Core Concept</h4>
+  <p>The central idea was simple: <span class="highlight">give the player pleasure in shooting</span>.  
+  For that, I worked on <span class="highlight">particle effects, camera shake, and sound feedback</span> to make every shot feel impactful.</p>
+  <div class="image-placeholder">[Gameplay screenshot with particles]</div>
+
+  <h4>Gameplay Loop</h4>
+  <p>Players face waves of enemies with increasing difficulty.  
+  Each wave is designed to <span class="highlight">challenge reflexes and strategy</span>, forcing the player to <span class="highlight">adapt and react quickly</span>.  
+  I added a <span class="highlight">combo system</span> rewarding precision and chaining actions.</p>
+  <div class="image-placeholder">[Wave progression diagram]</div>
+
+  <h4>Visual and Feedback Experimentation</h4>
+  <p>Shmup served as a <span class="highlight">testbed</span> for various <span class="highlight">feedback systems</span>:</p>
+  <ul>
+    <li><span class="highlight">Particles</span> on hit, destruction, and explosions.</li>
+    <li><span class="highlight">Camera shake</span> for heavy hits or boss phases.</li>
+    <li><span class="highlight">Score and combo UI</span> with dynamic feedback.</li>
+  </ul>
+  <div class="image-placeholder">[Particle and UI screenshots]</div>
+
+  <h4>Result</h4>
+  <p>This project strengthened my skills in <span class="highlight">gameplay feel, polish, and solo development</span>.  
+  It also reinforced my <span class="highlight">love for programming interactivity and player experience</span>.</p>
+  <div class="image-placeholder">[Final gameplay screenshot]</div>`,
+        tags: ['love/Solo Dev','love/Action','love/Gameplay', 'engine/Godot','lang/C#'],
+        collabs: [`Collaborators:`, `Dev :  <br> ${MATHYS}`],
         video: 'Assets/Demo/SHUMP _ MUSIC GAME.mp4',
-        poster: 'Assets/background/TOURAKI_WEB.png'
+        poster: 'Assets/Demo/Shmup.mp4'
     },
 ];
 
+
+
+
 // ======== AJOUT DES PROJETS ========
 const CONTAINER = document.getElementById("Projects");
+let tags = new Map();
+tags.set("All",[]);
 AddProjects();
 
 function AddProjects(projects = PROJECTS) {
     projects.forEach(project => {
+        
         let card = document.createElement('div');
         card.classList.add('projectCard');
         card.innerHTML = `
@@ -128,6 +235,15 @@ function AddProjects(projects = PROJECTS) {
             <div class="tags">
                 ${
                      project.tags.map(tag => {
+                       if( tags.has(tag))
+                       {
+                            tags.get(tag).push(card);
+                       }
+                       else
+                    {
+                        tags.set(tag,[card]);
+                    }
+                        tags.get("All").push(card);
                     const [classe, text] = tag.split('/');
                      return `<span class="${classe} tag">${text}</span>`;
                     })
@@ -142,6 +258,43 @@ function AddProjects(projects = PROJECTS) {
     });
 }
 
+// ======== TAGS SELECTOR ========
+let tagsSelectorSection = document.getElementById("ButtonTagsContainer");
+
+let tagbuttons = new Set();
+function CreateTagsSelector()
+{
+   Array.from(tags.keys()).forEach(tag => {
+    if(tags.get(tag).length <= 1) return; 
+    let button = document.createElement("button");
+    
+    button.classList.add("tagButton");
+    tagbuttons.add(button);
+
+    button.innerHTML = tag.includes("/") ? tag.split("/")[1] : tag;
+    button.addEventListener("click", () => {
+       ApplyFilter(tag);
+       tagbuttons.forEach(btn => btn.classList.remove('active'));
+       button.classList.add('active');
+    })
+   tagsSelectorSection.appendChild(button);
+})
+}
+CreateTagsSelector();
+
+function ApplyFilter(filter) {
+    // Parcours toutes les cartes
+    document.querySelectorAll(".projectCard").forEach(card => {
+        card.style.display = "none"; // on cache tout d'abord
+    });
+
+    // Montre uniquement les cartes correspondant au filtre
+    if (tags.has(filter)) {
+        tags.get(filter).forEach(card => {
+            card.style.display = "flex";
+        });
+    }
+}
 // ======== ECRAN DU PROJET ========
 const PROJECT_SCREEN = document.getElementById("ProjectScreen");
 PROJECT_SCREEN.style.display = "none";

@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 const videoPaths = ['Assets/Demo/Hope.mp4', 'Assets/Demo/PLAYER.png' ,'Assets/Demo/SHUMP _ MUSIC GAME.mp4','Assets/Demo/TOKOTEM_SOKOBAN.mp4','Assets/Demo/Miam - Serious Game.mp4','Assets/Demo/AlgoVersGamePlay-GameJam.mp4'];
 let availableMedia = [...videoPaths];
 
-// Configurable parameters
+
 const TARGET_BUBBLES = 5; // main media bubbles
 const COLLISION_THRESHOLD = 15;
 const MIN_SCALE = 100;
@@ -15,7 +15,7 @@ const MAX_SPAWN_ATTEMPTS = 20;
 const EXPLOSION_CHANCE = 0.1;
 
 // Decorative bubble settings
-let DECORATIVE_BUBBLES = 50;
+let DECORATIVE_BUBBLES = 200;
 const DECOR_MIN_RADIUS = 10;
 const DECOR_MAX_RADIUS = 25;
 const DECOR_RESPAWN_RATE = 0.05;
@@ -110,7 +110,7 @@ class Bubble {
     gradient.addColorStop(1,this.isDecor ? 'rgba(138,43,226,0.08)' : 'rgba(138,43,226,0.15)');
     ctx.beginPath();ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);ctx.fillStyle=gradient;ctx.fill();
     ctx.strokeStyle='rgba(255,255,255,0.6)';
-    ctx.lineWidth=2;
+    ctx.lineWidth= this.isDecor ? 2 : 5;
     ctx.stroke();
   }
 }

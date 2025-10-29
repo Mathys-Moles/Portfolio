@@ -8,7 +8,7 @@ let switchText = document.getElementById("SwitchTexte");
 const frSections = ["Mathys Moles.", "Gameplay programmeur.", "Modulaire.", "Passionne.", "Motive.", "Game designer.", "Etudiant a ISART DIGITAL."];
 const enSections = ["Mathys Moles.", "a Gameplay Programmer.", "Modular.", "Passionate.", "Motivated.", "a Game Designer.", "Student at ISART DIGITAL."];
 
-let currentLang = true;
+let currentLang = false;
 let sections;
 
 let badgeButton = Array.from(document.getElementsByClassName("badge"));
@@ -93,8 +93,8 @@ async function ChangeLang() {
 //=========================
 // BOUCLE SECTIONS
 //=========================
-ChangeLang();
-
+// ChangeLang();
+sections = enSections;
 Flashing(texteBar, 500, "rgb(255, 255, 255)", "rgba(255, 255, 255, 0)", true);
 
 setTimeout(() => {
@@ -211,5 +211,5 @@ document.getElementById("SendMail").addEventListener("click", () => {
 //=========================
 // TRADUCTION BUTTON
 //=========================
-let tradButton = document.getElementById("TardButton");
-tradButton.addEventListener("click", ChangeLang);
+// let tradButton = document.getElementById("TardButton");
+// tradButton.addEventListener("click", ChangeLang);

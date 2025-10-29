@@ -1,7 +1,7 @@
 /* #region Projects & ProjectScreen */
 #Projects {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 13vh 9% 16vh 9%;
+    padding: 5vh 9% 16vh 9%;
     display: grid;
     text-align: left;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -10,6 +10,7 @@
 }
 
 #BackProjects {
+   
     background-size: cover;
     background-repeat: repeat-y;
     background-image: url(../Assets/background/TOURAKI_WEB.png);
@@ -48,6 +49,7 @@
 .projectCard video {
     height: 50%;
     width: 100%;
+    
 }
 
 .tags {
@@ -109,7 +111,7 @@
 
 #Gamplay {
     width: 90%;
-    max-height: 70vh;
+    max-height: 49vh;
     border-radius: 40px;
 }
 
@@ -171,8 +173,84 @@ a {
     font-size: 1.2rem;
     border-radius: 8px;
   }
+ #TagsSelector
+ {
+      display: flex;
+     align-items: center;
+    justify-content: center;
+     flex-direction: column;
+background-color: #00071900;     border-radius: 0 0 200px 200px;
+        backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+     border-bottom: #ffffff49 3px solid;
+ }
+ #TagsSelector p{
+    text-shadow: 6px 5px 4px rgba(0, 0, 0, 0.72);
+  font-family: "Cloudy", sans-serif;
+  -webkit-text-stroke: 1px black;
+  font-weight: 100;
+  font-size: 30px;
+    margin-top:  5vh;
+ }
 
- 
+ #ButtonTagsContainer
+ {
+     height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.tagButton {
+       backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--text);
+  transition: all 500ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  
+    background: linear-gradient(to bottom, rgba(252, 252, 252, 0.104), rgba(69, 69, 69, 0.464));
+ margin: 0.1em;
+}
 
+.tagButton:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  
+  box-shadow: 4px 5px 17px -4px #268391;
+   margin: 1em;
+}
+
+.tagButton::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--accent);
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 500ms;
+}
+
+.tagButton:hover::before {
+  width: 250%;
+}
+.tagButton.active {
+   margin: 1em;
+
+  color: #ffffff;
+  background-color: var(--accent); /* ton bleu par exemple */
+  box-shadow: 4px 5px 17px -4px #268391;
+  transform: scale(1.1);
+}
 
 /* #endregion */
