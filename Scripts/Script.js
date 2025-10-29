@@ -109,21 +109,21 @@ setTimeout(() => {
 //=========================
 // BADGES
 //=========================
-badgeButton.forEach(element => {
-    element.addEventListener("click", async () => {
-        if (!translationsData) await loadTranslations();
-        const key = element.dataset.type;
+// badgeButton.forEach(element => {
+//     element.addEventListener("click", async () => {
+//         if (!translationsData) await loadTranslations();
+//         const key = element.dataset.type;
 
-        let count = 0;
-        paragraphes.forEach(p => {
-            const bTexte = translationsData[`${key}${count}`];
-            console.log(`${key}${count}`);
+//         let count = 0;
+//         paragraphes.forEach(p => {
+//             const bTexte = translationsData[`${key}${count}`];
+//             console.log(`${key}${count}`);
 
-            EraseTextGradually(p, bTexte, 10);
-            count++;
-        });
-    });
-});
+//             EraseTextGradually(p, bTexte, 10);
+//             count++;
+//         });
+//     });
+// });
 
 //=========================
 // CONTACTS

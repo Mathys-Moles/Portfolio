@@ -486,25 +486,25 @@ padding: 3px;
 }
 
 /* Hover brutaliste */
-.badge:hover {
+/* .badge:hover {
 
   border-color: #03050430;
   transform: translate(-6px, -6px) rotate(1deg);
   box-shadow: 10px 10px 0 #000000, 15px 15px 20px rgba(64, 164, 122, 0.2);
-}
+} */
 
-.badge:hover img {
+/* .badge:hover img {
   transform: scale(1.1);
   animation: spin-and-zoom 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
 }
 
 .badge:hover p {
   opacity: 1;
-  max-height: 40px; /* fait apparaître le texte */
-}
+  max-height: 40px; 
+} */
 
 /* Effet lumineux */
-.badge::before,
+/* .badge::before,
 .badge::after {
   content: "";
   position: absolute;
@@ -524,7 +524,7 @@ padding: 3px;
 .badge::after { left: 100%; }
 
 .badge:hover::before { animation: swipeRight 1.5s infinite; }
-.badge:hover::after { animation: swipeLeft 1.5s infinite; }
+.badge:hover::after { animation: swipeLeft 1.5s infinite; } */
 
 @keyframes swipeRight { 100% { transform: translateX(200%) skew(-45deg); } }
 @keyframes swipeLeft  { 100% { transform: translateX(-200%) skew(-45deg); } }
