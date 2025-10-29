@@ -43,7 +43,7 @@
   <div class="section-wrapper" style="position: relative;">
 
     <section id="HomePage">
-      <div class="contentLigne" style="flex-wrap: wrap;">
+      <div class="contentLigne" id="TexteSwap" style="flex-wrap: wrap;">
         <p data-key="StartSwitch" class="SameTexte">I am</p>
         <h1 id="SwitchTexte" class="SameTexte">Mathys Moles </h1>
         <p id="TexteBar">|</p>
@@ -51,9 +51,9 @@
     </section>
     <canvas id="bubbleCanvas"></canvas>
 
-    <img src="Assets/background/BACKGROUND_CLOUD.png" 
+    <img id="TransitionCloud" src="Assets/background/BACKGROUND_CLOUD.png" 
        alt="Cloud" 
-       style="position: absolute; top: 12%; left: 0; width: 100%; z-index: 2; pointer-events: none;">
+      >
 
     <!-- About Section -->
     <section id="about" class="about-section">
@@ -106,7 +106,6 @@
             <span class="badge engine" data-type="godot">Godot</span>
             <span class="badge engine" data-type="adobe">Adobe</span>
             <span class="badge engine" data-type="adobe">Office</span>
-
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 
 .about-section {
     min-height: 100vh;
-    max-height: 110vh;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ background: linear-gradient(to top, #000000 54%, #D0F1FF 87%, #FFCCDF 100%);
     display: flex;
     gap: 0.6rem;
     flex-wrap: wrap;
-    max-width: 600px;
+    /* max-width: 600px; */
     margin-top: 20px;
 }
 
@@ -59,6 +59,7 @@ background: linear-gradient(to top, #000000 54%, #D0F1FF 87%, #FFCCDF 100%);
     border-radius: 12px;
     box-shadow: 4px 4px 1px #000000;
     cursor: pointer;
+    
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

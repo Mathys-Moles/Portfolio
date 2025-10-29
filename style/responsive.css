@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 768px) {
-    .principal, .secondary, .infoButton, #about img, #Sticker, #pofile, #ProjectDescrib, #ProjectTitel, #SideCollab, #SideTags {
+    .principal,#TagsSelector,.secondary, .infoButton, #about img, #Sticker, #pofile, #ProjectDescrib, #ProjectTitel, #SideCollab, #SideTags {
         display: none;
     }
     #Gamplay { width: 100%; }
@@ -15,6 +15,16 @@
     #Contact { width: 0; gap: 50%; }
     #AboutTexte { padding: 0; }
 }
+#TransitionCloud{
+  position: absolute; top: 16%; left: 0; width: 100%; z-index: 2; pointer-events: none;
+}
+@media (max-width: 768px) {#TexteSwap,.SameTexte{font-size: 30px;}}
+@media (max-width: 600px) {#TexteSwap,.SameTexte{display: none;}}
+@media (max-width: 500px) {#TransitionCloud{ top: 43.5%;}}
+@media (max-width: 400px) {#TransitionCloud{ top: 40.5%;}}
+@media (max-width: 392px) {#TransitionCloud{ top: 42%;}}
+@media (max-width: 380px) {#TransitionCloud{  top: 40%;}}
+@media (max-width: 376px) {#TransitionCloud{  top: 35%;}}
 
 @media (max-width: 600px) {
     .poster { display: none; }
